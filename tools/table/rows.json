@@ -2986,6 +2986,295 @@
   "why": "укладывается с запасом"
  },
  {
+  "id": "pixal3d-trellis",
+  "cat": "3D: генерация из одного фото",
+  "name": "Pixal3D и TRELLIS.2 (Microsoft / Comfy-Org)",
+  "mode": "картинка → 3D-модель (GLB, PBR, меш)",
+  "wf": [
+   "3d/Pixal3D & TRELLIS.2 Изображение в модель"
+  ],
+  "cap": {
+   "t23d": "— (через T2I)",
+   "i23d": "✓ из одного фото",
+   "mv23d": "—",
+   "pbr": "✓ PBR (цвет, нормали)",
+   "format": "GLB (меш)",
+   "topo": "✓ Remesh, Decimate, ретопология",
+   "uv": "✓ авто-развёртка UV"
+  },
+  "kind": "3d",
+  "native": "1024×1024 (одно фото)",
+  "time": "~1–2 мин (генерация геометрии + текстурирование + запекание normal map)",
+  "mem": "Модели 15,2 ГБ. Веса 15,2 ГБ (Pixal3D 5.6 ГБ int8 + TRELLIS.2 5.3 ГБ int8 + VAE 2.1 ГБ + DINOv3 1.2 ГБ + MoGe-2 0.7 ГБ + BiRefNet 0.4 ГБ). В VRAM ~9–11 ГБ через dynamic VRAM.",
+  "maxs": "Любое разрешение фото (центрируется с удалением фона BiRefNet). Выход: плотный или оптимизированный GLB-меш до 1536 вокселей.",
+  "prompt": "Промпта нет (генерация из изображения). На входе желательно четкое изображение объекта на нейтральном фоне или с авто-удалением фона через BiRefNet.",
+  "plus": "Высочайшее качество геометрии и PBR-текстур среди открытых моделей; единый пайплайн с удалением фона, оценкой ракурса MoGe-2, ремешингом, запеканием карт нормалей и UV-развёрткой; веса int8 уже скачаны и готовы.",
+  "minus": "Многостадийный пайплайн (структура → форма → апскейл → текстура); генерация занимает 1–2 мин; нет встроенного риггинга.",
+  "lic": "Apache 2.0 / MIT",
+  "src": [
+   "https://github.com/microsoft/TRELLIS",
+   "https://huggingface.co/Comfy-Org/Pixal3D",
+   "https://huggingface.co/Comfy-Org/TRELLIS.2"
+  ],
+  "base": "pixal3d-trellis",
+  "model": "Pixal3D и TRELLIS.2 (Microsoft / Comfy-Org)",
+  "sheet": "3d",
+  "total": 15.2034571,
+  "biggest": 5.584555824,
+  "nfiles": 7,
+  "ratio": 0.0,
+  "t_default": 0,
+  "verdict": "✅",
+  "why": "укладывается с запасом"
+ },
+ {
+  "id": "hunyuan3d-v21",
+  "cat": "3D: генерация из фото",
+  "name": "Hunyuan3D 2.0 / 2.1 (Tencent) · картинка → 3D-модель (GLB, меш, v2.1)",
+  "kind": "3d",
+  "native": "512–1024 (одно или несколько фото)",
+  "time": "~30–60 с",
+  "mem": "Модели 5,2 ГБ. Чекпоинты 4,9–7,4 ГБ. В VRAM ~6–8 ГБ.",
+  "maxs": "Одно фото или ортогональные виды (front/side/back). Выход: воксельная сетка конвертируется в GLB.",
+  "prompt": "Промпта нет (по изображению). Для multiview нужны согласованные виды (ортогональные ракурсы объекта).",
+  "plus": "Быстрая генерация; режим Multi-View восстанавливает сложные невидимые поверхности; поддержка Turbo-шагов; локальные веса на диске.",
+  "minus": "Текстуры менее четкие, чем у Trellis 2.",
+  "lic": "Tencent Hunyuan Community License",
+  "src": [
+   "https://github.com/Tencent/Hunyuan3D-2",
+   "https://huggingface.co/Comfy-Org/hunyuan3D_2.1_repackaged"
+  ],
+  "mode": "картинка → 3D-модель (GLB, меш, v2.1)",
+  "wf": [
+   "3d/Hunyuan3D 2.1"
+  ],
+  "cap": {
+   "t23d": "— (через T2I)",
+   "i23d": "✓ из одного фото",
+   "mv23d": "—",
+   "pbr": "✓ цветная сетка / PBR",
+   "format": "GLB",
+   "topo": "✓ VoxelToMesh",
+   "uv": "✓"
+  },
+  "base": "hunyuan3d",
+  "model": "Hunyuan3D 2.0 / 2.1 (Tencent)",
+  "sheet": "3d",
+  "total": 5.2,
+  "biggest": 0.0,
+  "nfiles": 0,
+  "ratio": 0.0,
+  "t_default": 0,
+  "verdict": "✅",
+  "why": "укладывается с запасом"
+ },
+ {
+  "id": "hunyuan3d-v20",
+  "cat": "3D: генерация из фото",
+  "name": "Hunyuan3D 2.0 / 2.1 (Tencent) · картинка → 3D-модель (GLB, меш, v2.0)",
+  "kind": "3d",
+  "native": "512–1024 (одно или несколько фото)",
+  "time": "~30–50 с",
+  "mem": "Модели 5,2 ГБ. Чекпоинты 4,9–7,4 ГБ. В VRAM ~6–8 ГБ.",
+  "maxs": "Одно фото или ортогональные виды (front/side/back). Выход: воксельная сетка конвертируется в GLB.",
+  "prompt": "Промпта нет (по изображению). Для multiview нужны согласованные виды (ортогональные ракурсы объекта).",
+  "plus": "Быстрая генерация; режим Multi-View восстанавливает сложные невидимые поверхности; поддержка Turbo-шагов; локальные веса на диске.",
+  "minus": "Текстуры менее четкие, чем у Trellis 2.",
+  "lic": "Tencent Hunyuan Community License",
+  "src": [
+   "https://github.com/Tencent/Hunyuan3D-2",
+   "https://huggingface.co/Comfy-Org/hunyuan3D_2.1_repackaged"
+  ],
+  "mode": "картинка → 3D-модель (GLB, меш, v2.0)",
+  "wf": [
+   "3d/Hunyuan3D 2.0"
+  ],
+  "cap": {
+   "t23d": "— (через T2I)",
+   "i23d": "✓ из одного фото",
+   "mv23d": "—",
+   "pbr": "✓ цветная сетка",
+   "format": "GLB",
+   "topo": "✓ VoxelToMesh",
+   "uv": "✓"
+  },
+  "base": "hunyuan3d",
+  "model": "Hunyuan3D 2.0 / 2.1 (Tencent)",
+  "sheet": "3d",
+  "total": 5.2,
+  "biggest": 0.0,
+  "nfiles": 0,
+  "ratio": 0.0,
+  "t_default": 0,
+  "verdict": "✅",
+  "why": "укладывается с запасом"
+ },
+ {
+  "id": "hunyuan3d-mv",
+  "cat": "3D: генерация из фото",
+  "name": "Hunyuan3D 2.0 / 2.1 (Tencent) · мультиракурс → 3D-модель (GLB, меш)",
+  "kind": "3d",
+  "native": "512–1024 (одно или несколько фото)",
+  "time": "~20–45 с (Turbo ~15–25 с)",
+  "mem": "Модели 5,2 ГБ. Чекпоинты 4,9–7,4 ГБ. В VRAM ~6–8 ГБ.",
+  "maxs": "Одно фото или ортогональные виды (front/side/back). Выход: воксельная сетка конвертируется в GLB.",
+  "prompt": "Промпта нет (по изображению). Для multiview нужны согласованные виды (ортогональные ракурсы объекта).",
+  "plus": "Быстрая генерация; режим Multi-View восстанавливает сложные невидимые поверхности; поддержка Turbo-шагов; локальные веса на диске.",
+  "minus": "Текстуры менее четкие, чем у Trellis 2.",
+  "lic": "Tencent Hunyuan Community License",
+  "src": [
+   "https://github.com/Tencent/Hunyuan3D-2",
+   "https://huggingface.co/Comfy-Org/hunyuan3D_2.1_repackaged"
+  ],
+  "mode": "мультиракурс → 3D-модель (GLB, меш)",
+  "wf": [
+   "3d/Hunyuan3D 2.0 Мультиракурс",
+   "3d/Hunyuan3D 2.0 Мультиракурс Turbo"
+  ],
+  "cap": {
+   "t23d": "—",
+   "i23d": "✓",
+   "mv23d": "✓ 3–6 ракурсов (front, side, back)",
+   "pbr": "✓ PBR-текстуры",
+   "format": "GLB",
+   "topo": "✓ VoxelToMesh",
+   "uv": "✓"
+  },
+  "base": "hunyuan3d",
+  "model": "Hunyuan3D 2.0 / 2.1 (Tencent)",
+  "sheet": "3d",
+  "total": 5.2,
+  "biggest": 0.0,
+  "nfiles": 0,
+  "ratio": 0.0,
+  "t_default": 0,
+  "verdict": "✅",
+  "why": "укладывается с запасом"
+ },
+ {
+  "id": "triposplat",
+  "cat": "3D: Gaussian Splatting",
+  "name": "TripoSplat (VAST-AI)",
+  "mode": "картинка → 3D Gaussian Splat (.ply) / меш (.glb)",
+  "wf": [
+   "3d/TripoSplat от изображения к Gaussian Splat"
+  ],
+  "cap": {
+   "t23d": "— (через T2I)",
+   "i23d": "✓ из одного фото",
+   "mv23d": "—",
+   "pbr": "✓ 3D Gaussian Splats",
+   "format": "PLY (Splat) + GLB",
+   "topo": "✓ Splat to Mesh",
+   "uv": "—"
+  },
+  "kind": "3d",
+  "native": "512×512 (одно фото)",
+  "time": "~15–30 с",
+  "mem": "Модели 4,8 ГБ. Веса 3,4 ГБ (DiT 0.74 ГБ + DINOv3 1.68 ГБ + VAE decoder 0.58 ГБ + BiRefNet 0.44 ГБ). В VRAM ~8–10 ГБ.",
+  "maxs": "512² вход. На выходе — миллионы 3D гауссиан, возможность рендеринга 360-видео и конвертации в полигональный меш.",
+  "prompt": "Промпта нет (из фото). Вход изолируется от фона нодой BiRefNet.",
+  "plus": "Сверхбыстрая генерация фотореалистичных 3D-сплэтов; идеальная передача полупрозрачности, сложных отражений и тонких структур; мгновенный видео-рендер вращения вокруг объекта.",
+  "minus": "Gaussian Splatting (.ply) не является стандартной полигональной сеткой (требует конвертации SplatToMesh для 3D-печати или стандартных движков); вес PLY файла велик.",
+  "lic": "Apache 2.0",
+  "src": [
+   "https://github.com/VAST-AI-Research/TripoSplat",
+   "https://huggingface.co/VAST-AI/TripoSplat"
+  ],
+  "base": "triposplat",
+  "model": "TripoSplat (VAST-AI)",
+  "sheet": "3d",
+  "total": 4.8,
+  "biggest": 1.681247696,
+  "nfiles": 5,
+  "ratio": 0.0,
+  "t_default": 0,
+  "verdict": "✅",
+  "why": "укладывается с запасом"
+ },
+ {
+  "id": "moge-perspective",
+  "cat": "3D: монокулярная геометрия",
+  "name": "MoGe-2 3D-меш (Microsoft Research) · картинка → 3D-геометрия, GLB-меш",
+  "kind": "3d",
+  "native": "до 2048 по ширине",
+  "time": "~2–5 с",
+  "mem": "Модели 0,7 ГБ. Веса 0,66 ГБ (moge_2_vitl_normal_fp16.safetensors). VRAM ~2 ГБ.",
+  "maxs": "Вход до 2048px (авто-ресайз). Выход: точная метрическая глубина и цветная полигональная сетка интерьера/сцены.",
+  "prompt": "Промпта нет. MoGe оценивает геометрию реальных сцен, комнат, ландшафтов.",
+  "plus": "Метрическая глубина и карты нормалей; реконструирует окружение и сцену целиком, а не только изолированный предмет; веса уже на диске; работает за секунды.",
+  "minus": "Реконструирует только видимую геометрию со стороны камеры (барельеф/shell); не достраивает невидимую заднюю сторону объекта; цвет накладывается как vertex colors, а не UV-текстура.",
+  "lic": "MIT",
+  "src": [
+   "https://github.com/microsoft/MoGe",
+   "https://huggingface.co/Comfy-Org/MoGe"
+  ],
+  "mode": "картинка → 3D-геометрия, GLB-меш",
+  "wf": [
+   "3d/MoGe Оценка перспективной геометрии"
+  ],
+  "cap": {
+   "t23d": "—",
+   "i23d": "✓ из одного фото",
+   "mv23d": "—",
+   "pbr": "✓ вершинный цвет / нормали",
+   "format": "GLB",
+   "topo": "✓ decimation filter",
+   "uv": "— (vertex colors)"
+  },
+  "base": "moge-3d",
+  "model": "MoGe-2 3D-меш (Microsoft Research)",
+  "sheet": "3d",
+  "total": 0.661859924,
+  "biggest": 0.661859924,
+  "nfiles": 1,
+  "ratio": 0.0,
+  "t_default": 0,
+  "verdict": "✅",
+  "why": "укладывается с запасом"
+ },
+ {
+  "id": "moge-panorama",
+  "cat": "3D: монокулярная геометрия",
+  "name": "MoGe-2 3D-меш (Microsoft Research) · 360°-панорама → сферический меш сцены (GLB)",
+  "kind": "3d",
+  "native": "до 2048 по ширине",
+  "time": "~1–3 мин (слияние на CPU)",
+  "mem": "Модели 0,7 ГБ. Веса 0,66 ГБ (moge_2_vitl_normal_fp16.safetensors). VRAM ~2 ГБ.",
+  "maxs": "Вход до 2048px (авто-ресайз). Выход: точная метрическая глубина и цветная полигональная сетка интерьера/сцены.",
+  "prompt": "Промпта нет. MoGe оценивает геометрию реальных сцен, комнат, ландшафтов.",
+  "plus": "Метрическая глубина и карты нормалей; реконструирует окружение и сцену целиком, а не только изолированный предмет; веса уже на диске; работает за секунды.",
+  "minus": "Реконструирует только видимую геометрию со стороны камеры (барельеф/shell); не достраивает невидимую заднюю сторону объекта; цвет накладывается как vertex colors, а не UV-текстура.",
+  "lic": "MIT",
+  "src": [
+   "https://github.com/microsoft/MoGe",
+   "https://huggingface.co/Comfy-Org/MoGe"
+  ],
+  "mode": "360°-панорама → сферический меш сцены (GLB)",
+  "wf": [
+   "3d/Moge Панорама в Сетку"
+  ],
+  "cap": {
+   "t23d": "—",
+   "i23d": "✓ 360°-панорама",
+   "mv23d": "—",
+   "pbr": "✓ вершинный цвет",
+   "format": "GLB",
+   "topo": "✓ слияние граней",
+   "uv": "— (vertex colors)"
+  },
+  "base": "moge-3d",
+  "model": "MoGe-2 3D-меш (Microsoft Research)",
+  "sheet": "3d",
+  "total": 0.661859924,
+  "biggest": 0.661859924,
+  "nfiles": 1,
+  "ratio": 0.0,
+  "t_default": 0,
+  "verdict": "✅",
+  "why": "укладывается с запасом"
+ },
+ {
   "id": "upscale-z-image-turbo",
   "cat": "Апскейл: фото",
   "name": "Апскейл на Z-Image Turbo (img2img до 2K)",

@@ -38,7 +38,9 @@ CAT = {
         utility_z_image_turbo_2k_upscaler.app basic_datatype_conversion basic_image_color_adjustment
         basic_mask_operations_and_compositing""",
     'llm': 'llm_qwen3_5_text_gen llm_qwen3_text_gen llm_qwen3vl_text_gen',
-    '3d': '3d_moge_panorama_to_mesh 3d_moge_perspective_to_mesh',
+    '3d': """3d_pixal3d_trellis2_image_to_model 3d_hunyuan3d-v2.1 3d_hunyuan3d_image_to_model
+        3d_hunyuan3d_multiview_to_model 3d_hunyuan3d_multiview_to_model_turbo
+        3d_triposplat_image_to_gaussian_splat 3d_moge_panorama_to_mesh 3d_moge_perspective_to_mesh""",
 }
 OWN = {
     'AnimeGen-I2V (Wan 2.2).json': 'video',

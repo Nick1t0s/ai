@@ -41,6 +41,10 @@ SHEETS = [
                         ('emo', 'Эмоции, теги'), ('dialog', 'Диалог'), ('vocal', 'Песня с вокалом'), ('inst', 'Инструментал, SFX'),
                         ('v2a', 'Звук к видео'), ('asr', 'Аудио → текст'), ('sr', 'Частота')],
      ['sound']),
+    ('3d', '3D', [('t23d', 'Из текста'), ('i23d', 'Из картинки'), ('mv23d', 'Мультиракурс'),
+                  ('pbr', 'PBR-текстуры'), ('format', 'Формат (GLB/PLY)'), ('topo', 'Топология / Ремеш'),
+                  ('uv', 'UV-развёртка')],
+     ['real', 'anime', 'drawn', 'graphic']),
     ('upscale', 'Апскейл', [('scale', 'Масштаб'), ('gen', 'Дорисовывает детали'), ('restore', 'Реставрация (шум, мыло, сжатие)'),
                             ('drawn', 'Аниме и 2D'), ('prompt', 'Промпт')],
      ['real', 'anime', 'drawn', 'graphic']),
@@ -54,6 +58,8 @@ R = []
 def sheet_of(cat):
     if cat.startswith(('Фото', 'Редактирование фото')):
         return 'photo'
+    if cat.startswith('3D'):
+        return '3d'
     return {'Видео': 'video', 'Аудио': 'audio', 'Апскейл': 'upscale'}.get(cat.split(':')[0].split(' ')[0], 'tool')
 
 
@@ -1489,3 +1495,76 @@ m(id='llm', cat='LLM (текст)', name='Qwen3.5 4B, Qwen3 4B, Qwen3-VL 4B',
   plus='Локально переводит, расширяет и структурирует промпты, подписывает картинки; Qwen3.5 4B — сильнейшая модель до 5B по Artificial Analysis.',
   minus='4B — маленькая модель: факты и длинная логика слабые.',
   lic='Apache-2.0', src=['https://artificialanalysis.ai/articles/qwen3-5-small-models', 'https://docs.comfy.org/'])
+
+# ───────────────────────── 3D: локальные модели генерации 3D ─────────────────────────
+m(id='pixal3d-trellis', cat='3D: генерация из одного фото', name='Pixal3D и TRELLIS.2 (Microsoft / Comfy-Org)',
+  mode='картинка → 3D-модель (GLB, PBR, меш)', wf=['3d/Pixal3D & TRELLIS.2 Изображение в модель'],
+  cap=dict(t23d='— (через T2I)', i23d='✓ из одного фото', mv23d='—', pbr='✓ PBR (цвет, нормали)',
+           format='GLB (меш)', topo='✓ Remesh, Decimate, ретопология', uv='✓ авто-развёртка UV'),
+  kind='3d', native='1024×1024 (одно фото)',
+  time='~1–2 мин (генерация геометрии + текстурирование + запекание normal map)',
+  mem='Веса 15,2 ГБ (Pixal3D 5.6 ГБ int8 + TRELLIS.2 5.3 ГБ int8 + VAE 2.1 ГБ + DINOv3 1.2 ГБ + MoGe-2 0.7 ГБ + BiRefNet 0.4 ГБ). В VRAM ~9–11 ГБ через dynamic VRAM.',
+  maxs='Любое разрешение фото (центрируется с удалением фона BiRefNet). Выход: плотный или оптимизированный GLB-меш до 1536 вокселей.',
+  prompt='Промпта нет (генерация из изображения). На входе желательно четкое изображение объекта на нейтральном фоне или с авто-удалением фона через BiRefNet.',
+  plus='Высочайшее качество геометрии и PBR-текстур среди открытых моделей; единый пайплайн с удалением фона, оценкой ракурса MoGe-2, ремешингом, запеканием карт нормалей и UV-развёрткой; веса int8 уже скачаны и готовы.',
+  minus='Многостадийный пайплайн (структура → форма → апскейл → текстура); генерация занимает 1–2 мин; нет встроенного риггинга.',
+  lic='Apache 2.0 / MIT',
+  src=['https://github.com/microsoft/TRELLIS', 'https://huggingface.co/Comfy-Org/Pixal3D', 'https://huggingface.co/Comfy-Org/TRELLIS.2'])
+
+m(id='hunyuan3d', cat='3D: генерация из фото', name='Hunyuan3D 2.0 / 2.1 (Tencent)',
+  split=[
+      dict(id='hunyuan3d-v21', mode='картинка → 3D-модель (GLB, меш, v2.1)', wf=['3d/Hunyuan3D 2.1'],
+           cap=dict(t23d='— (через T2I)', i23d='✓ из одного фото', mv23d='—', pbr='✓ цветная сетка / PBR',
+                    format='GLB', topo='✓ VoxelToMesh', uv='✓'),
+           time='~30–60 с'),
+      dict(id='hunyuan3d-v20', mode='картинка → 3D-модель (GLB, меш, v2.0)', wf=['3d/Hunyuan3D 2.0'],
+           cap=dict(t23d='— (через T2I)', i23d='✓ из одного фото', mv23d='—', pbr='✓ цветная сетка',
+                    format='GLB', topo='✓ VoxelToMesh', uv='✓'),
+           time='~30–50 с'),
+      dict(id='hunyuan3d-mv', mode='мультиракурс → 3D-модель (GLB, меш)',
+           wf=['3d/Hunyuan3D 2.0 Мультиракурс', '3d/Hunyuan3D 2.0 Мультиракурс Turbo'],
+           cap=dict(t23d='—', i23d='✓', mv23d='✓ 3–6 ракурсов (front, side, back)', pbr='✓ PBR-текстуры',
+                    format='GLB', topo='✓ VoxelToMesh', uv='✓'),
+           time='~20–45 с (Turbo ~15–25 с)'),
+  ],
+  kind='3d', native='512–1024 (одно или несколько фото)',
+  time='~30–60 с на модель (Turbo: ~15–25 с)', mem='Чекпоинты 4,9–7,4 ГБ. В VRAM ~6–8 ГБ.',
+  maxs='Одно фото или ортогональные виды (front/side/back). Выход: воксельная сетка конвертируется в GLB.',
+  prompt='Промпта нет (по изображению). Для multiview нужны согласованные виды (ортогональные ракурсы объекта).',
+  plus='Быстрая генерация; режим Multi-View восстанавливает сложные невидимые поверхности; поддержка Turbo-шагов; локальные веса на диске.',
+  minus='Текстуры менее четкие, чем у Trellis 2.',
+  lic='Tencent Hunyuan Community License',
+  src=['https://github.com/Tencent/Hunyuan3D-2', 'https://huggingface.co/Comfy-Org/hunyuan3D_2.1_repackaged'])
+
+m(id='triposplat', cat='3D: Gaussian Splatting', name='TripoSplat (VAST-AI)',
+  mode='картинка → 3D Gaussian Splat (.ply) / меш (.glb)', wf=['3d/TripoSplat от изображения к Gaussian Splat'],
+  cap=dict(t23d='— (через T2I)', i23d='✓ из одного фото', mv23d='—', pbr='✓ 3D Gaussian Splats',
+           format='PLY (Splat) + GLB', topo='✓ Splat to Mesh', uv='—'),
+  kind='3d', native='512×512 (одно фото)', time='~15–30 с',
+  mem='Веса 3,4 ГБ (DiT 0.74 ГБ + DINOv3 1.68 ГБ + VAE decoder 0.58 ГБ + BiRefNet 0.44 ГБ). В VRAM ~8–10 ГБ.',
+  maxs='512² вход. На выходе — миллионы 3D гауссиан, возможность рендеринга 360-видео и конвертации в полигональный меш.',
+  prompt='Промпта нет (из фото). Вход изолируется от фона нодой BiRefNet.',
+  plus='Сверхбыстрая генерация фотореалистичных 3D-сплэтов; идеальная передача полупрозрачности, сложных отражений и тонких структур; мгновенный видео-рендер вращения вокруг объекта.',
+  minus='Gaussian Splatting (.ply) не является стандартной полигональной сеткой (требует конвертации SplatToMesh для 3D-печати или стандартных движков); вес PLY файла велик.',
+  lic='Apache 2.0',
+  src=['https://github.com/VAST-AI-Research/TripoSplat', 'https://huggingface.co/VAST-AI/TripoSplat'])
+
+m(id='moge-3d', cat='3D: монокулярная геометрия', name='MoGe-2 3D-меш (Microsoft Research)',
+  split=[
+      dict(id='moge-perspective', mode='картинка → 3D-геометрия, GLB-меш', wf=['3d/MoGe Оценка перспективной геометрии'],
+           cap=dict(t23d='—', i23d='✓ из одного фото', mv23d='—', pbr='✓ вершинный цвет / нормали',
+                    format='GLB', topo='✓ decimation filter', uv='— (vertex colors)'),
+           time='~2–5 с'),
+      dict(id='moge-panorama', mode='360°-панорама → сферический меш сцены (GLB)', wf=['3d/Moge Панорама в Сетку'],
+           cap=dict(t23d='—', i23d='✓ 360°-панорама', mv23d='—', pbr='✓ вершинный цвет',
+                    format='GLB', topo='✓ слияние граней', uv='— (vertex colors)'),
+           time='~1–3 мин (слияние на CPU)'),
+  ],
+  kind='3d', native='до 2048 по ширине', time='геометрия фото ~2–5 с; панорама ~1–3 мин',
+  mem='Веса 0,66 ГБ (moge_2_vitl_normal_fp16.safetensors). VRAM ~2 ГБ.',
+  maxs='Вход до 2048px (авто-ресайз). Выход: точная метрическая глубина и цветная полигональная сетка интерьера/сцены.',
+  prompt='Промпта нет. MoGe оценивает геометрию реальных сцен, комнат, ландшафтов.',
+  plus='Метрическая глубина и карты нормалей; реконструирует окружение и сцену целиком, а не только изолированный предмет; веса уже на диске; работает за секунды.',
+  minus='Реконструирует только видимую геометрию со стороны камеры (барельеф/shell); не достраивает невидимую заднюю сторону объекта; цвет накладывается как vertex colors, а не UV-текстура.',
+  lic='MIT',
+  src=['https://github.com/microsoft/MoGe', 'https://huggingface.co/Comfy-Org/MoGe'])

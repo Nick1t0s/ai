@@ -11,7 +11,7 @@ MD = AI + '/comfyui/models'
 ALIAS = {'clip': 'text_encoders', 'unet': 'diffusion_models'}
 # модели кастомных нод: размер папок (ГБ), по id строки или по id модели
 DISK_MANUAL = {'fish-s2': 8.0, 'qwen3-tts': 14.0, 'voxcpm2': 4.7, 'chatterbox': 3.0, 'mmaudio': 5.3, 'hunyuan-foley': 8.2,
-               'heartmula': 22.4, 'heartmula-lyrics': 3.1}
+               'heartmula': 22.4, 'heartmula-lyrics': 3.1, 'hunyuan3d': 5.2, 'triposplat': 4.8}
 STYLE_TITLE = dict(STYLES)
 assert len({r['id'] for r in R}) == len(R) and len({r['name'] for r in R}) == len(R), 'дубли id или имён строк'
 DM_DIRS = ('diffusion_models', 'checkpoints')
@@ -31,7 +31,7 @@ def wf_files(names):
                 f = os.path.join(MD, d, mm['name'])
                 if os.path.exists(f):
                     files[(d, mm['name'])] = os.path.getsize(f)
-            if x['type'] == 'CheckpointLoaderSimple' and x.get('widgets_values'):
+            if x['type'] in ('CheckpointLoaderSimple', 'ImageOnlyCheckpointLoader') and x.get('widgets_values'):
                 f = os.path.join(MD, 'checkpoints', x['widgets_values'][0])
                 if os.path.exists(f):
                     files[('checkpoints', x['widgets_values'][0])] = os.path.getsize(f)
