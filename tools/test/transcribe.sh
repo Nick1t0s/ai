@@ -4,5 +4,8 @@
 set -euo pipefail
 curl --noproxy "*" -s -X POST http://127.0.0.1:8188/free -H "Content-Type: application/json" \
     -d '{"unload_models":true,"free_memory":true}' >/dev/null 2>&1 || true
-SP=~/whisper-venv/lib/python3.14/site-packages/nvidia
-LD_LIBRARY_PATH=$SP/cublas/lib:$SP/cudnn/lib ~/whisper-venv/bin/python -I "$(dirname "$0")/transcribe.py" "$@"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+VENV_DIR="$SCRIPT_DIR/venv"
+SP="$(echo "$VENV_DIR"/lib/python*/site-packages/nvidia)"
+LD_LIBRARY_PATH="${SP}/cublas/lib:${SP}/cudnn/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}" \
+    "$VENV_DIR/bin/python" -I "$SCRIPT_DIR/transcribe.py" "$@"
