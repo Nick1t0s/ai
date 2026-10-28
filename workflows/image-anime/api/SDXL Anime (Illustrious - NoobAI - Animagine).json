@@ -1,0 +1,107 @@
+{
+ "7": {
+  "inputs": {
+   "filename_prefix": "sdxl_anime/img",
+   "images": [
+    "14",
+    0
+   ]
+  },
+  "class_type": "SaveImage",
+  "_meta": {
+   "title": "Save Image"
+  }
+ },
+ "10": {
+  "inputs": {
+   "text": "masterpiece, best quality, very aesthetic, absurdres, 1girl, solo, silver hair, long hair, blue eyes, witch hat, night sky, stars, city lights, looking at viewer, smile, upper body",
+   "clip": [
+    "15",
+    1
+   ]
+  },
+  "class_type": "CLIPTextEncode",
+  "_meta": {
+   "title": "Positive Prompt"
+  }
+ },
+ "11": {
+  "inputs": {
+   "text": "worst quality, low quality, lowres, bad anatomy, bad hands, extra digits, fewer digits, jpeg artifacts, signature, watermark, username, blurry",
+   "clip": [
+    "15",
+    1
+   ]
+  },
+  "class_type": "CLIPTextEncode",
+  "_meta": {
+   "title": "Negative Prompt"
+  }
+ },
+ "12": {
+  "inputs": {
+   "seed": 0,
+   "steps": 28,
+   "cfg": 5.5,
+   "sampler_name": "euler_ancestral",
+   "scheduler": "normal",
+   "denoise": 1,
+   "model": [
+    "15",
+    0
+   ],
+   "positive": [
+    "10",
+    0
+   ],
+   "negative": [
+    "11",
+    0
+   ],
+   "latent_image": [
+    "13",
+    0
+   ]
+  },
+  "class_type": "KSampler",
+  "_meta": {
+   "title": "KSampler"
+  }
+ },
+ "13": {
+  "inputs": {
+   "width": 832,
+   "height": 1216,
+   "batch_size": 1
+  },
+  "class_type": "EmptyLatentImage",
+  "_meta": {
+   "title": "Empty Latent"
+  }
+ },
+ "14": {
+  "inputs": {
+   "samples": [
+    "12",
+    0
+   ],
+   "vae": [
+    "15",
+    2
+   ]
+  },
+  "class_type": "VAEDecode",
+  "_meta": {
+   "title": "VAE Decode"
+  }
+ },
+ "15": {
+  "inputs": {
+   "ckpt_name": "Illustrious-XL-v2.0.safetensors"
+  },
+  "class_type": "CheckpointLoaderSimple",
+  "_meta": {
+   "title": "Load Checkpoint"
+  }
+ }
+}

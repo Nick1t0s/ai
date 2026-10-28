@@ -1,0 +1,124 @@
+{
+ "21": {
+  "inputs": {
+   "filename_prefix": "audio/ComfyUI",
+   "audio": [
+    "40",
+    0
+   ]
+  },
+  "class_type": "SaveAudio",
+  "_meta": {
+   "title": "Save Audio (FLAC) (DEPRECATED)"
+  }
+ },
+ "24": {
+  "inputs": {
+   "audio": "voice_sample.mp3"
+  },
+  "class_type": "LoadAudio",
+  "_meta": {
+   "title": "Load Audio"
+  }
+ },
+ "26": {
+  "inputs": {
+   "audio": [
+    "38",
+    0
+   ]
+  },
+  "class_type": "PreviewAudio",
+  "_meta": {
+   "title": "Preview Audio"
+  }
+ },
+ "31": {
+  "inputs": {
+   "audio": [
+    "39",
+    0
+   ]
+  },
+  "class_type": "PreviewAudio",
+  "_meta": {
+   "title": "Preview Audio"
+  }
+ },
+ "38": {
+  "inputs": {
+   "text": "Есть дела, за которые кто-то должен взяться. Наше поколение прокладывало дорогу, а ваше должно довести её до звёзд.",
+   "instruct": "A deep, powerful voice of a man in his late sixties: low register, steady unhurried pace, calm authority and warmth, like a seasoned scientist addressing young colleagues.",
+   "model_choice": "1.7B",
+   "device": "auto",
+   "precision": "bf16",
+   "language": "Russian",
+   "seed": 356099600882452,
+   "max_new_tokens": 2048,
+   "top_p": 0.8,
+   "top_k": 20,
+   "temperature": 1,
+   "repetition_penalty": 1.05,
+   "attention": "auto",
+   "unload_model_after_generate": false
+  },
+  "class_type": "FB_Qwen3TTSVoiceDesign",
+  "_meta": {
+   "title": "🎨 Qwen3-TTS VoiceDesign"
+  }
+ },
+ "39": {
+  "inputs": {
+   "text": "Да ты издеваешься! Сломал все мои вещи и даже не извинился. Не выводи меня, лучше уходи по-хорошему.",
+   "speaker": "Ryan",
+   "model_choice": "1.7B",
+   "device": "auto",
+   "precision": "bf16",
+   "language": "Russian",
+   "seed": 435637652599430,
+   "instruct": "Speak with irritation and anger, fast and loud.",
+   "max_new_tokens": 2048,
+   "top_p": 0.8,
+   "top_k": 20,
+   "temperature": 1,
+   "repetition_penalty": 1.05,
+   "attention": "auto",
+   "unload_model_after_generate": false,
+   "custom_model_path": "",
+   "custom_speaker_name": ""
+  },
+  "class_type": "FB_Qwen3TTSCustomVoice",
+  "_meta": {
+   "title": "🎵 Qwen3-TTS CustomVoice"
+  }
+ },
+ "40": {
+  "inputs": {
+   "target_text": "Ну ладно. Хорошо, оставлю эту игрушку здесь. До встречи!",
+   "model_choice": "1.7B",
+   "device": "auto",
+   "precision": "bf16",
+   "language": "Russian",
+   "ref_text": "",
+   "seed": 682779102015929,
+   "max_new_tokens": 2048,
+   "top_p": 0.8,
+   "top_k": 20,
+   "temperature": 1,
+   "repetition_penalty": 1.05,
+   "x_vector_only": false,
+   "instruct": "",
+   "attention": "auto",
+   "unload_model_after_generate": false,
+   "custom_model_path": "",
+   "ref_audio": [
+    "24",
+    0
+   ]
+  },
+  "class_type": "FB_Qwen3TTSVoiceClone",
+  "_meta": {
+   "title": "🎭 Qwen3-TTS VoiceClone"
+  }
+ }
+}

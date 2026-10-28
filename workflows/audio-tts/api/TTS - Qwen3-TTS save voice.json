@@ -1,0 +1,67 @@
+{
+ "49": {
+  "inputs": {
+   "audio": [
+    "51",
+    1
+   ]
+  },
+  "class_type": "PreviewAudio",
+  "_meta": {
+   "title": "Preview Audio"
+  }
+ },
+ "51": {
+  "inputs": {
+   "filename": "designed_voice.wav"
+  },
+  "class_type": "FB_Qwen3TTSLoadSpeaker",
+  "_meta": {
+   "title": "🎙️ Qwen3-TTS LoadSpeaker"
+  }
+ },
+ "52": {
+  "inputs": {
+   "target_text": "Даже если ты сам не хочешь лечиться, подумай о других. Ладно, на друзей тебе плевать, но твоя семья? Неужели тебе всё равно, что они чувствуют?",
+   "model_choice": "1.7B",
+   "device": "auto",
+   "precision": "bf16",
+   "language": "Russian",
+   "ref_text": [
+    "51",
+    2
+   ],
+   "seed": 354999975505821,
+   "max_new_tokens": 4096,
+   "top_p": 0.8,
+   "top_k": 20,
+   "temperature": 1,
+   "repetition_penalty": 1.05,
+   "x_vector_only": false,
+   "instruct": "",
+   "attention": "auto",
+   "unload_model_after_generate": false,
+   "custom_model_path": "",
+   "voice_clone_prompt": [
+    "51",
+    0
+   ]
+  },
+  "class_type": "FB_Qwen3TTSVoiceClone",
+  "_meta": {
+   "title": "🎭 Qwen3-TTS VoiceClone"
+  }
+ },
+ "53": {
+  "inputs": {
+   "audio": [
+    "52",
+    0
+   ]
+  },
+  "class_type": "PreviewAudio",
+  "_meta": {
+   "title": "Preview Audio"
+  }
+ }
+}

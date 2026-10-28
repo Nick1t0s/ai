@@ -1,0 +1,815 @@
+[
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_z_image_turbo.json",
+  "cat": "image-photo",
+  "kind": "template",
+  "id": "image_z_image_turbo",
+  "name": "Z-Image-Turbo текст в изображение"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_z_image_turbo_fun_union_controlnet.json",
+  "cat": "image-photo",
+  "kind": "template",
+  "id": "image_z_image_turbo_fun_union_controlnet",
+  "name": "Z-Image-Turbo контроль в изображение"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_z_image_turbo_int8.json",
+  "cat": "image-photo",
+  "kind": "template",
+  "id": "image_z_image_turbo_int8",
+  "name": "Z-Image-Turbo Int8 текст в изображение"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_z_image.json",
+  "cat": "image-photo",
+  "kind": "template",
+  "id": "image_z_image",
+  "name": "Z-Image текст в изображение"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_krea2_turbo_t2i_int8.json",
+  "cat": "image-photo",
+  "kind": "template",
+  "id": "image_krea2_turbo_t2i_int8",
+  "name": "Krea-2 Int8 текст в изображение"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_krea2_turbo_int8_image_style_reference.json",
+  "cat": "image-photo",
+  "kind": "template",
+  "id": "image_krea2_turbo_int8_image_style_reference",
+  "name": "Krea-2 Int8 Референс стиля изображения"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_qwen_Image_2512.json",
+  "cat": "image-photo",
+  "kind": "template",
+  "id": "image_qwen_Image_2512",
+  "name": "Qwen Image 2512"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_qwen_image_2512_with_2steps_lora.json",
+  "cat": "image-photo",
+  "kind": "template",
+  "id": "image_qwen_image_2512_with_2steps_lora",
+  "name": "Qwen-Image 2512 Turbo"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/template_qwen_Image_2512_360_lora.json",
+  "cat": "image-photo",
+  "kind": "template",
+  "id": "template_qwen_Image_2512_360_lora",
+  "name": "Qwen Image 2512 360-градусное панорамное изображение"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_qwen_Image_2512_controlnet.json",
+  "cat": "image-photo",
+  "kind": "template",
+  "id": "image_qwen_Image_2512_controlnet",
+  "name": "Qwen-Image 2512 Fun Union ControlNet"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/flux1_krea_dev.json",
+  "cat": "image-photo",
+  "kind": "template",
+  "id": "flux1_krea_dev",
+  "name": "Flux.1 Krea Dev"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_chroma_text_to_image.json",
+  "cat": "image-photo",
+  "kind": "template",
+  "id": "image_chroma_text_to_image",
+  "name": "Chroma текст в изображение"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_ideogram4_t2i_int8.json",
+  "cat": "image-photo",
+  "kind": "template",
+  "id": "image_ideogram4_t2i_int8",
+  "name": "Ideogram v4 Int8 текст в изображение"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_mage_flow_t2i_int8.json",
+  "cat": "image-photo",
+  "kind": "template",
+  "id": "image_mage_flow_t2i_int8",
+  "name": "Mage-Flow текст в изображение"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_mage_flow_turbo_t2i_int8.json",
+  "cat": "image-photo",
+  "kind": "template",
+  "id": "image_mage_flow_turbo_t2i_int8",
+  "name": "Mage-Flow Turbo текст в изображение"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_kandinsky5_t2i.json",
+  "cat": "image-photo",
+  "kind": "template",
+  "id": "image_kandinsky5_t2i",
+  "name": "Kandinsky 5.0 Изображение Lite текст в изображение"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_flux2_klein_text_to_image.json",
+  "cat": "image-photo",
+  "kind": "template",
+  "id": "image_flux2_klein_text_to_image",
+  "name": "Flux.2 Klein 4B - текст в изображение"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_anima_base_v1.json",
+  "cat": "image-anime",
+  "kind": "template",
+  "id": "image_anima_base_v1",
+  "name": "Anima Base v1 текст в изображение"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_anima_lllite_any_control_to_image.json",
+  "cat": "image-anime",
+  "kind": "template",
+  "id": "image_anima_lllite_any_control_to_image",
+  "name": "Anima Lllite Любое управление к Изображению"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_anima_lllite_depth_control_to_image.json",
+  "cat": "image-anime",
+  "kind": "template",
+  "id": "image_anima_lllite_depth_control_to_image",
+  "name": "Anima Lllite Управление глубиной изображения"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_netayume_lumina_t2i.json",
+  "cat": "image-anime",
+  "kind": "template",
+  "id": "image_netayume_lumina_t2i",
+  "name": "NetaYume Lumina текст в изображение"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_newbieimage_exp0_1-t2i.json",
+  "cat": "image-anime",
+  "kind": "template",
+  "id": "image_newbieimage_exp0_1-t2i",
+  "name": "NewBie Exp0.1 Генерация аниме"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/template_qwen_image_illustration_lora.json",
+  "cat": "image-anime",
+  "kind": "template",
+  "id": "template_qwen_image_illustration_lora",
+  "name": "Qwen Image LoRA для иллюстраций"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_qwen_image_edit_2511.json",
+  "cat": "image-edit",
+  "kind": "template",
+  "id": "image_qwen_image_edit_2511",
+  "name": "Qwen Edit 2511 - замена материала"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_qwen_image_edit_2509.json",
+  "cat": "image-edit",
+  "kind": "template",
+  "id": "image_qwen_image_edit_2509",
+  "name": "Qwen Edit 2509 - редактирование изображения"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/templates-1_click_multiple_scene_angles-v1.0.json",
+  "cat": "image-edit",
+  "kind": "template",
+  "id": "templates-1_click_multiple_scene_angles-v1.0",
+  "name": "Qwen Edit 2509 - ракурсы сцены одним кликом"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/templates-image_to_real.json",
+  "cat": "image-edit",
+  "kind": "template",
+  "id": "templates-image_to_real",
+  "name": "Qwen Edit 2509 - иллюстрация в реализм"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/templates_rob_portrait_light_migration.app.json",
+  "cat": "image-edit",
+  "kind": "template",
+  "id": "templates_rob_portrait_light_migration.app",
+  "name": "Qwen Edit 2509 - переосвещение портрета (app)"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/templates-portrait_light_migration.json",
+  "cat": "image-edit",
+  "kind": "template",
+  "id": "templates-portrait_light_migration",
+  "name": "Qwen Edit 2509 - перенос освещения на портрет"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_qwen_image_edit_2509_relight.json",
+  "cat": "image-edit",
+  "kind": "template",
+  "id": "image_qwen_image_edit_2509_relight",
+  "name": "Qwen Edit 2509 - переосвещение фото"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/flux_kontext_dev_basic.json",
+  "cat": "image-edit",
+  "kind": "template",
+  "id": "flux_kontext_dev_basic",
+  "name": "Flux Kontext Dev Редактирование изображения"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_flux2_klein_image_edit_4b_base.json",
+  "cat": "image-edit",
+  "kind": "template",
+  "id": "image_flux2_klein_image_edit_4b_base",
+  "name": "Flux.2 Klein 4B - редактор изображений"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_flux2_klein_image_edit_4b_distilled.json",
+  "cat": "image-edit",
+  "kind": "template",
+  "id": "image_flux2_klein_image_edit_4b_distilled",
+  "name": "Flux.2 Klein 4B Distilled - редактор изображений"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_mage_flow_edit_int8.json",
+  "cat": "image-edit",
+  "kind": "template",
+  "id": "image_mage_flow_edit_int8",
+  "name": "Mage-Flow-Edit Редактирование изображения"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_mage_flow_edit_turbo_int8.json",
+  "cat": "image-edit",
+  "kind": "template",
+  "id": "image_mage_flow_edit_turbo_int8",
+  "name": "Mage-Flow-Edit Turbo Редактирование изображения"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/image_anima_lllite_image_inpainting.json",
+  "cat": "image-edit",
+  "kind": "template",
+  "id": "image_anima_lllite_image_inpainting",
+  "name": "Anima Lllite Инпейнтинг изображения"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/video_bernini_r_image_editing.json",
+  "cat": "image-edit",
+  "kind": "template",
+  "id": "video_bernini_r_image_editing",
+  "name": "Bernini-R Редактирование изображений"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/video_wan2_2_14B_i2v.json",
+  "cat": "video",
+  "kind": "template",
+  "id": "video_wan2_2_14B_i2v",
+  "name": "Wan 2.2 14B изображение в видео"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/video_wan2_2_14B_t2v.json",
+  "cat": "video",
+  "kind": "template",
+  "id": "video_wan2_2_14B_t2v",
+  "name": "Wan 2.2 14B текст в видео"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/video_wan2_2_14B_flf2v.json",
+  "cat": "video",
+  "kind": "template",
+  "id": "video_wan2_2_14B_flf2v",
+  "name": "Wan 2.2 14B Первый-Последний кадр в Видео"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/templates-6-key-frames.json",
+  "cat": "video",
+  "kind": "template",
+  "id": "templates-6-key-frames",
+  "name": "Wan 2.2 14B ключевые кадры (склейка FLF-сегментов)"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/video_ltx2_3_i2v.json",
+  "cat": "video",
+  "kind": "template",
+  "id": "video_ltx2_3_i2v",
+  "name": "LTX-2.3 изображение в видео"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/video_ltx2_3_t2v.json",
+  "cat": "video",
+  "kind": "template",
+  "id": "video_ltx2_3_t2v",
+  "name": "LTX-2.3 текст в видео"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/video_ltx2_3_flf2v.json",
+  "cat": "video",
+  "kind": "template",
+  "id": "video_ltx2_3_flf2v",
+  "name": "LTX-2.3 FLF2V"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/video_ltx2_3_ia2v.json",
+  "cat": "video",
+  "kind": "template",
+  "id": "video_ltx2_3_ia2v",
+  "name": "LTX-2.3 Изображение и аудио в видео"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/template_ltx2_3_style_transition.json",
+  "cat": "video",
+  "kind": "template",
+  "id": "template_ltx2_3_style_transition",
+  "name": "Стилевой переход LTX-2.3"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/video_minimax_h3_i2v.json",
+  "cat": "video",
+  "kind": "template",
+  "id": "video_minimax_h3_i2v",
+  "name": "MiniMax H3 изображение в видео"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/video_minimax_h3_t2v.json",
+  "cat": "video",
+  "kind": "template",
+  "id": "video_minimax_h3_t2v",
+  "name": "MiniMax H3 текст в видео"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/video_minimax_h3_i2v_continuation.json",
+  "cat": "video",
+  "kind": "template",
+  "id": "video_minimax_h3_i2v_continuation",
+  "name": "MiniMax H3 продолжение видео"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/video_hunyuan_video_1.5_720p_i2v.json",
+  "cat": "video",
+  "kind": "template",
+  "id": "video_hunyuan_video_1.5_720p_i2v",
+  "name": "Hunyuan Видео 1.5 изображение в видео"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/video_hunyuan_video_1.5_720p_t2v.json",
+  "cat": "video",
+  "kind": "template",
+  "id": "video_hunyuan_video_1.5_720p_t2v",
+  "name": "Hunyuan Видео 1.5 текст в видео"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/video_wan2_2_5B_ti2v.json",
+  "cat": "video",
+  "kind": "template",
+  "id": "video_wan2_2_5B_ti2v",
+  "name": "Wan 2.2 5B генерация видео"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/video_kandinsky5_t2v.json",
+  "cat": "video",
+  "kind": "template",
+  "id": "video_kandinsky5_t2v",
+  "name": "Kandinsky 5.0 Video Lite текст в видео"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/video_kandinsky5_i2v.json",
+  "cat": "video",
+  "kind": "template",
+  "id": "video_kandinsky5_i2v",
+  "name": "Kandinsky 5.0 Видео Lite изображение в видео"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/video_minimax_h3_r2v.json",
+  "cat": "video-reference",
+  "kind": "template",
+  "id": "video_minimax_h3_r2v",
+  "name": "MiniMax H3 Референс в видео"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/video_wan_animate2.json",
+  "cat": "video-reference",
+  "kind": "template",
+  "id": "video_wan_animate2",
+  "name": "Wan Animate 2 Перенос движения"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/video_wan21_scail2_character_replacement_int8.json",
+  "cat": "video-reference",
+  "kind": "template",
+  "id": "video_wan21_scail2_character_replacement_int8",
+  "name": "SCAIL-2 Int8 Замена персонажа"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/video_wan2_2_14B_s2v.json",
+  "cat": "video-reference",
+  "kind": "template",
+  "id": "video_wan2_2_14B_s2v",
+  "name": "Wan2.2-S2V Генерация Видео на Основе Аудио"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/video_wan2_1_infinitetalk.json",
+  "cat": "video-reference",
+  "kind": "template",
+  "id": "video_wan2_1_infinitetalk",
+  "name": "InfiniteTalk Полное озвучивание видео тела на основе аудио"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/video_bernini_r_video_editing.json",
+  "cat": "video-reference",
+  "kind": "template",
+  "id": "video_bernini_r_video_editing",
+  "name": "Bernini-R Видеомонтаж"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/utility_void_video_inpainting.json",
+  "cat": "video-reference",
+  "kind": "template",
+  "id": "utility_void_video_inpainting",
+  "name": "VOID Инпейнтинг видео"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/template_ltx2_3_ic_lora_ingredients.json",
+  "cat": "video-reference",
+  "kind": "template",
+  "id": "template_ltx2_3_ic_lora_ingredients",
+  "name": "LTX-2.3 IC-LoRA Управление опорным листом"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/video_ltx2_3_id_lora.json",
+  "cat": "video-reference",
+  "kind": "template",
+  "id": "video_ltx2_3_id_lora",
+  "name": "LTX-2.3 ID LoRA"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/video_ltx2_3_ic_lora.json",
+  "cat": "video-reference",
+  "kind": "template",
+  "id": "video_ltx2_3_ic_lora",
+  "name": "LTX 2.3 IC-LoRA Union Control"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/audio_ace_step1_5_xl_turbo.json",
+  "cat": "audio-music",
+  "kind": "template",
+  "id": "audio_ace_step1_5_xl_turbo",
+  "name": "ACE-Step 1.5XL Turbo Текст в музыку"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/audio_ace_step1_5_xl_sft.json",
+  "cat": "audio-music",
+  "kind": "template",
+  "id": "audio_ace_step1_5_xl_sft",
+  "name": "ACE-Step 1.5XL SFT Текст в музыку"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/audio_minimax_music_3.json",
+  "cat": "audio-music",
+  "kind": "template",
+  "id": "audio_minimax_music_3",
+  "name": "MiniMax Music 3 Текст в музыку"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/audio_stable_audio_3_medium.json",
+  "cat": "audio-sound",
+  "kind": "template",
+  "id": "audio_stable_audio_3_medium",
+  "name": "Stable Audio 3.0 Medium"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/utility_seedvr2_3b_int8_upscale_video.json",
+  "cat": "utility",
+  "kind": "template",
+  "id": "utility_seedvr2_3b_int8_upscale_video",
+  "name": "SeedVR2 3B Int8 Апскейл Видео"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/utility_seedvr2_7b_int8_upscale_image.json",
+  "cat": "utility",
+  "kind": "template",
+  "id": "utility_seedvr2_7b_int8_upscale_image",
+  "name": "SeedVR2 7B Int8 Масштабировать изображение"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/utility_seedvr2_3b_int8_upscale_image.json",
+  "cat": "utility",
+  "kind": "template",
+  "id": "utility_seedvr2_3b_int8_upscale_image",
+  "name": "SeedVR2 3B Int8 Масштабировать изображение"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/utility_video_frame_interpolation.json",
+  "cat": "utility",
+  "kind": "template",
+  "id": "utility_video_frame_interpolation",
+  "name": "Интерполяция кадров видео"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/utility_image_segment_sam3.json",
+  "cat": "utility",
+  "kind": "template",
+  "id": "utility_image_segment_sam3",
+  "name": "SAM3 Сегментация изображений"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/utility_video_segment_sam3.json",
+  "cat": "utility",
+  "kind": "template",
+  "id": "utility_video_segment_sam3",
+  "name": "SAM3 Сегментация видео"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/utility_birefnet_remove_background.json",
+  "cat": "utility",
+  "kind": "template",
+  "id": "utility_birefnet_remove_background",
+  "name": "BiRefNet Удаление фона"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/utility_sdpose_ood_image_to_pose.json",
+  "cat": "utility",
+  "kind": "template",
+  "id": "utility_sdpose_ood_image_to_pose",
+  "name": "SDPose-OOD Изображение в карту позы"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/utility_sdpose_ood_video_to_pose_map.json",
+  "cat": "utility",
+  "kind": "template",
+  "id": "utility_sdpose_ood_video_to_pose_map",
+  "name": "SDPose-OOD Видео в карту поз"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/utility-gan_upscaler.json",
+  "cat": "utility",
+  "kind": "template",
+  "id": "utility-gan_upscaler",
+  "name": "GAN-апскейлер видео (быстрый)"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/utility_depth_anything3_image_depth_estimation.json",
+  "cat": "utility",
+  "kind": "template",
+  "id": "utility_depth_anything3_image_depth_estimation",
+  "name": "Depth Anything 3 Оценка глубины изображения"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/utility_depth_anything3_video_depth_estimation.json",
+  "cat": "utility",
+  "kind": "template",
+  "id": "utility_depth_anything3_video_depth_estimation",
+  "name": "Depth Anything 3 Оценка глубины видео"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/utility_image_stitch.json",
+  "cat": "utility",
+  "kind": "template",
+  "id": "utility_image_stitch",
+  "name": "Сшивание изображений в сетку 2x2"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/utility_interpolation_image_upscale.json",
+  "cat": "utility",
+  "kind": "template",
+  "id": "utility_interpolation_image_upscale",
+  "name": "Апскейл изображения интерполяцией (без нейросети)"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/utility_moge_depth_estimation.json",
+  "cat": "utility",
+  "kind": "template",
+  "id": "utility_moge_depth_estimation",
+  "name": "MoGe Оценка глубины"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/utility_z_image_turbo_2k_upscaler.app.json",
+  "cat": "utility",
+  "kind": "template",
+  "id": "utility_z_image_turbo_2k_upscaler.app",
+  "name": "Апскейл изображения Z-Image-Turbo 2K"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/basic_datatype_conversion.json",
+  "cat": "utility",
+  "kind": "template",
+  "id": "basic_datatype_conversion",
+  "name": "Основы - преобразование типов данных"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/basic_image_color_adjustment.json",
+  "cat": "utility",
+  "kind": "template",
+  "id": "basic_image_color_adjustment",
+  "name": "Основы - коррекция цвета"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/basic_mask_operations_and_compositing.json",
+  "cat": "utility",
+  "kind": "template",
+  "id": "basic_mask_operations_and_compositing",
+  "name": "Основы - маски и композитинг"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/llm_qwen3_5_text_gen.json",
+  "cat": "llm",
+  "kind": "template",
+  "id": "llm_qwen3_5_text_gen",
+  "name": "Qwen3.5 Генерация текста"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/llm_qwen3_text_gen.json",
+  "cat": "llm",
+  "kind": "template",
+  "id": "llm_qwen3_text_gen",
+  "name": "Qwen3 Генерация текста"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/llm_qwen3vl_text_gen.json",
+  "cat": "llm",
+  "kind": "template",
+  "id": "llm_qwen3vl_text_gen",
+  "name": "Qwen3-VL Генерация текста"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/3d_moge_panorama_to_mesh.json",
+  "cat": "3d",
+  "kind": "template",
+  "id": "3d_moge_panorama_to_mesh",
+  "name": "Moge Панорама в Сетку"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/venv/lib/python3.11/site-packages/comfyui_workflow_templates_json/templates/3d_moge_perspective_to_mesh.json",
+  "cat": "3d",
+  "kind": "template",
+  "id": "3d_moge_perspective_to_mesh",
+  "name": "MoGe Оценка перспективной геометрии"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/user/default/workflows/AnimeGen-I2V (Wan 2.2).json",
+  "cat": "video",
+  "kind": "own",
+  "id": "AnimeGen-I2V (Wan 2.2)",
+  "name": "AnimeGen-I2V (Wan 2.2)"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/user/default/workflows/NoobAI-XL V-pred (anime).json",
+  "cat": "image-anime",
+  "kind": "own",
+  "id": "NoobAI-XL V-pred (anime)",
+  "name": "NoobAI-XL V-pred (anime)"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/user/default/workflows/SDXL Anime (Illustrious - NoobAI - Animagine).json",
+  "cat": "image-anime",
+  "kind": "own",
+  "id": "SDXL Anime (Illustrious - NoobAI - Animagine)",
+  "name": "SDXL Anime (Illustrious - NoobAI - Animagine)"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/user/default/workflows/SDXL Photo (RealVis - Juggernaut).json",
+  "cat": "image-photo",
+  "kind": "own",
+  "id": "SDXL Photo (RealVis - Juggernaut)",
+  "name": "SDXL Photo (RealVis - Juggernaut)"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/user/default/workflows/Qwen Edit 2511 - INFL8 Inflation (fp8).json",
+  "cat": "image-edit",
+  "kind": "own",
+  "id": "Qwen Edit 2511 - INFL8 Inflation (fp8)",
+  "name": "Qwen Edit 2511 - INFL8 Inflation (fp8)"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/user/default/workflows/Qwen Edit 2511 - Multiple Character Angles (fp8).json",
+  "cat": "image-edit",
+  "kind": "own",
+  "id": "Qwen Edit 2511 - Multiple Character Angles (fp8)",
+  "name": "Qwen Edit 2511 - Multiple Character Angles (fp8)"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/user/default/workflows/Qwen Edit 2511 - SYSTMS Action (fp8).json",
+  "cat": "image-edit",
+  "kind": "own",
+  "id": "Qwen Edit 2511 - SYSTMS Action (fp8)",
+  "name": "Qwen Edit 2511 - SYSTMS Action (fp8)"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/user/default/workflows/TTS - Fish Audio S2 Pro.json",
+  "cat": "audio-tts",
+  "kind": "own",
+  "id": "TTS - Fish Audio S2 Pro",
+  "name": "TTS - Fish Audio S2 Pro"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/user/default/workflows/TTS - Qwen3-TTS (clone, design, custom).json",
+  "cat": "audio-tts",
+  "kind": "own",
+  "id": "TTS - Qwen3-TTS (clone, design, custom)",
+  "name": "TTS - Qwen3-TTS (clone, design, custom)"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/user/default/workflows/TTS - Qwen3-TTS dialogue.json",
+  "cat": "audio-tts",
+  "kind": "own",
+  "id": "TTS - Qwen3-TTS dialogue",
+  "name": "TTS - Qwen3-TTS dialogue"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/user/default/workflows/TTS - Qwen3-TTS save voice.json",
+  "cat": "audio-tts",
+  "kind": "own",
+  "id": "TTS - Qwen3-TTS save voice",
+  "name": "TTS - Qwen3-TTS save voice"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/user/default/workflows/TTS - VoxCPM2.json",
+  "cat": "audio-tts",
+  "kind": "own",
+  "id": "TTS - VoxCPM2",
+  "name": "TTS - VoxCPM2"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/user/default/workflows/TTS - Chatterbox Multilingual (RU).json",
+  "cat": "audio-tts",
+  "kind": "own",
+  "id": "TTS - Chatterbox Multilingual (RU)",
+  "name": "TTS - Chatterbox Multilingual (RU)"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/user/default/workflows/Music - HeartMuLa 3B.json",
+  "cat": "audio-music",
+  "kind": "own",
+  "id": "Music - HeartMuLa 3B",
+  "name": "Music - HeartMuLa 3B"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/user/default/workflows/Video to Audio - HunyuanVideo-Foley.json",
+  "cat": "audio-sound",
+  "kind": "own",
+  "id": "Video to Audio - HunyuanVideo-Foley",
+  "name": "Video to Audio - HunyuanVideo-Foley"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/user/default/workflows/Video to Audio - MMAudio.json",
+  "cat": "audio-sound",
+  "kind": "own",
+  "id": "Video to Audio - MMAudio",
+  "name": "Video to Audio - MMAudio"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/user/default/workflows/Upscale - SeedVR2 7B Sharp fp16 (фото).json",
+  "cat": "utility",
+  "kind": "own",
+  "id": "Upscale - SeedVR2 7B Sharp fp16 (фото)",
+  "name": "Upscale - SeedVR2 7B Sharp fp16 (фото)"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/user/default/workflows/Upscale - SeedVR2 7B (видео).json",
+  "cat": "utility",
+  "kind": "own",
+  "id": "Upscale - SeedVR2 7B (видео)",
+  "name": "Upscale - SeedVR2 7B (видео)"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/user/default/workflows/Upscale - Фото 4K (Z-Image + SeedVR2 7B).json",
+  "cat": "utility",
+  "kind": "own",
+  "id": "Upscale - Фото 4K (Z-Image + SeedVR2 7B)",
+  "name": "Upscale - Фото 4K (Z-Image + SeedVR2 7B)"
+ },
+ {
+  "src": "/home/nik/ai/comfyui/user/default/workflows/Upscale - Аниме hires-fix (Illustrious).json",
+  "cat": "utility",
+  "kind": "own",
+  "id": "Upscale - Аниме hires-fix (Illustrious)",
+  "name": "Upscale - Аниме hires-fix (Illustrious)"
+ },
+ {
+  "src": "fixed/Lyrics Transcriber.json",
+  "cat": "audio-music",
+  "kind": "upstream",
+  "id": "HeartMuLa_ComfyUI/example workflows/Lyrics Transcriber.json",
+  "name": "HeartMuLa - распознавание текста песни"
+ },
+ {
+  "src": "fixed/Model Fine-Tuning and Workflow Usage.json",
+  "cat": "training",
+  "kind": "upstream",
+  "id": "ComfyUI-Qwen-TTS/example/Model Fine-Tuning and Workflow Usage.json",
+  "name": "Qwen3-TTS - дообучение голоса",
+  "api_src": "fixed/Model Fine-Tuning and Workflow Usage.enabled.json"
+ },
+ {
+  "src": "fixed/VoxCPM-lora-training.json",
+  "cat": "training",
+  "kind": "upstream",
+  "id": "ComfyUI-VoxCPM/example_workflows/VoxCPM-lora-training.json",
+  "name": "VoxCPM - обучение LoRA"
+ },
+ {
+  "src": "fixed/netayume_tensorart.json",
+  "cat": "image-anime",
+  "kind": "external",
+  "id": "duongve/NetaYume-Lumina-Image-2.0/Lumina_image_v2_tensorart_workflow.json",
+  "name": "NetaYume Lumina - авторские настройки (Tensor.Art)"
+ }
+]

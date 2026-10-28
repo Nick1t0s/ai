@@ -1,0 +1,29 @@
+{
+ "10": {
+  "inputs": {
+   "lyrics": "[Intro]\n\n[Verse]\nEvery night I try to load you\n70 billion, but my card says no\nLayers crash, tensors fade away\nYou slip right through my VRAM\n\n[Bridge]\nNear, low, wherever you hide\nMy model crashes, out of memory again\nOnce more you eat the door\nAnd leave me with nothing but pain\n\n[Chorus]\nAnd my VRAM will go on... and on\nPaging on SSD through the tears\nMy VRAM will go on... and on\nRunning at 2 tokens, drowning in fear\n\n[Verse]\nYou're here in my swap file tonight\nSafe in my dreams, but never quite right\nLove was when I had enough gigs\nNow it's just bluescreens every night\n\n[Outro]\nAnd my VRAM will go on... and on\n(please... just 8 more gigs...)\nMy VRAM will go on...",
+   "tags": "90s adult contemporary soft pop ballad, dreamy romantic atmosphere, warm rhodes piano, lush synth string pads, gentle acoustic guitar, breathy male vocals with long yearning phrases, big reverb and delay, heartfelt and slightly cheesy 90s radio love song feel, 100 bpm, smooth flowing eighth-note groove, emotional soaring chorus, tender and desperate tone",
+   "version": "3B-happy-new-year",
+   "max_audio_length_ms": 240000,
+   "topk": 50,
+   "temperature": 1,
+   "cfg_scale": 1.5
+  },
+  "class_type": "HeartMuLa_Generate",
+  "_meta": {
+   "title": "HeartMuLa Music Generator"
+  }
+ },
+ "11": {
+  "inputs": {
+   "audio": [
+    "10",
+    0
+   ]
+  },
+  "class_type": "PreviewAudio",
+  "_meta": {
+   "title": "Preview Audio"
+  }
+ }
+}

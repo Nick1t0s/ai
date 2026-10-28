@@ -1,0 +1,382 @@
+[
+ {
+  "url": "https://huggingface.co/openbmb/VoxCPM2/resolve/main/audiovae.pth",
+  "rel": "tts/VoxCPM/VoxCPM2/audiovae.pth",
+  "size": 376951122,
+  "sha256": "94b5d51e107e0507d4acc976cfdadb64edd6fd06d1f751dadbf2fd1594274bf1",
+  "present": false,
+  "templates": [
+   "openbmb/VoxCPM2"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/openbmb/VoxCPM2/resolve/main/config.json",
+  "rel": "tts/VoxCPM/VoxCPM2/config.json",
+  "size": 4336,
+  "sha256": "-",
+  "present": false,
+  "templates": [
+   "openbmb/VoxCPM2"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/openbmb/VoxCPM2/resolve/main/model.safetensors",
+  "rel": "tts/VoxCPM/VoxCPM2/model.safetensors",
+  "size": 4580080592,
+  "sha256": "f7f964cfa9da23653baec6e6f7750719977ad944ed9f95fe52fe3a620506891d",
+  "present": false,
+  "templates": [
+   "openbmb/VoxCPM2"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/openbmb/VoxCPM2/resolve/main/special_tokens_map.json",
+  "rel": "tts/VoxCPM/VoxCPM2/special_tokens_map.json",
+  "size": 1632,
+  "sha256": "-",
+  "present": false,
+  "templates": [
+   "openbmb/VoxCPM2"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/openbmb/VoxCPM2/resolve/main/tokenization_voxcpm2.py",
+  "rel": "tts/VoxCPM/VoxCPM2/tokenization_voxcpm2.py",
+  "size": 2895,
+  "sha256": "-",
+  "present": false,
+  "templates": [
+   "openbmb/VoxCPM2"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/openbmb/VoxCPM2/resolve/main/tokenizer.json",
+  "rel": "tts/VoxCPM/VoxCPM2/tokenizer.json",
+  "size": 3676772,
+  "sha256": "-",
+  "present": false,
+  "templates": [
+   "openbmb/VoxCPM2"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/openbmb/VoxCPM2/resolve/main/tokenizer_config.json",
+  "rel": "tts/VoxCPM/VoxCPM2/tokenizer_config.json",
+  "size": 5059,
+  "sha256": "-",
+  "present": false,
+  "templates": [
+   "openbmb/VoxCPM2"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/ResembleAI/chatterbox/resolve/main/conds.pt",
+  "rel": "tts/chatterbox/T3_v3/conds.pt",
+  "size": 107374,
+  "sha256": "6552d70568833628ba019c6b03459e77fe71ca197d5c560cef9411bee9d87f4e",
+  "present": false,
+  "templates": [
+   "ResembleAI/chatterbox"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/ResembleAI/chatterbox/resolve/main/grapheme_mtl_merged_expanded_v1.json",
+  "rel": "tts/chatterbox/T3_v3/grapheme_mtl_merged_expanded_v1.json",
+  "size": 69989,
+  "sha256": "-",
+  "present": false,
+  "templates": [
+   "ResembleAI/chatterbox"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/ResembleAI/chatterbox/resolve/main/s3gen.safetensors",
+  "rel": "tts/chatterbox/T3_v3/s3gen.safetensors",
+  "size": 1056484620,
+  "sha256": "2b78103c654207393955e4900aac14a12de8ef25f4b09424f1ef91941f161d4e",
+  "present": false,
+  "templates": [
+   "ResembleAI/chatterbox"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/ResembleAI/chatterbox/resolve/main/t3_mtl23ls_v3.safetensors",
+  "rel": "tts/chatterbox/T3_v3/t3_mtl23ls_v3.safetensors",
+  "size": 2143989928,
+  "sha256": "5abca8321ede76f8e61f1cc0d19aea6c946b28871017ce8726f8a69203f05953",
+  "present": false,
+  "templates": [
+   "ResembleAI/chatterbox"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/ResembleAI/chatterbox/resolve/main/ve.safetensors",
+  "rel": "tts/chatterbox/T3_v3/ve.safetensors",
+  "size": 5695784,
+  "sha256": "f0921cab452fa278bc25cd23ffd59d36f816d7dc5181dd1bef9751a7fb61f63c",
+  "present": false,
+  "templates": [
+   "ResembleAI/chatterbox"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/phazei/HunyuanVideo-Foley/resolve/main/hunyuanvideo_foley_fp8_e4m3fn.safetensors",
+  "rel": "foley/hunyuanvideo_foley_fp8_e4m3fn.safetensors",
+  "size": 5341941120,
+  "sha256": "1b2fa56b9d9bd0c89f3d7e486f9f00032f247cf10dd860cc6d7f0b734bca8a31",
+  "present": false,
+  "templates": [
+   "phazei/HunyuanVideo-Foley"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/phazei/HunyuanVideo-Foley/resolve/main/synchformer_state_dict_fp16.safetensors",
+  "rel": "foley/synchformer_state_dict_fp16.safetensors",
+  "size": 474981066,
+  "sha256": "4876e7dc86cd255bcf79540d93838362aed2e8a9d6f4574a92728c9fc699f511",
+  "present": false,
+  "templates": [
+   "phazei/HunyuanVideo-Foley"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/phazei/HunyuanVideo-Foley/resolve/main/vae_128d_48k_fp16.safetensors",
+  "rel": "foley/vae_128d_48k_fp16.safetensors",
+  "size": 743210820,
+  "sha256": "216fdd5a4c9774417b209a5d1754db5326c9f47375b232cce1333c13b3f239ab",
+  "present": false,
+  "templates": [
+   "phazei/HunyuanVideo-Foley"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/HeartMuLa/HeartMuLaGen/resolve/main/gen_config.json",
+  "rel": "HeartMuLa/gen_config.json",
+  "size": 101,
+  "sha256": "-",
+  "present": false,
+  "templates": [
+   "HeartMuLa/HeartMuLaGen"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/HeartMuLa/HeartMuLaGen/resolve/main/tokenizer.json",
+  "rel": "HeartMuLa/tokenizer.json",
+  "size": 9085657,
+  "sha256": "-",
+  "present": false,
+  "templates": [
+   "HeartMuLa/HeartMuLaGen"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/HeartMuLa/HeartMuLa-RL-oss-3B-20260123/resolve/main/config.json",
+  "rel": "HeartMuLa/HeartMuLa-oss-3B-happy-new-year/config.json",
+  "size": 308,
+  "sha256": "-",
+  "present": false,
+  "templates": [
+   "HeartMuLa/HeartMuLa-RL-oss-3B-20260123"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/HeartMuLa/HeartMuLa-RL-oss-3B-20260123/resolve/main/model-00001-of-00004.safetensors",
+  "rel": "HeartMuLa/HeartMuLa-oss-3B-happy-new-year/model-00001-of-00004.safetensors",
+  "size": 4933188000,
+  "sha256": "4bb9fa182c68f4a8205c006dfbf7da9686ac5c78b75b215538af2b97394b9eff",
+  "present": false,
+  "templates": [
+   "HeartMuLa/HeartMuLa-RL-oss-3B-20260123"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/HeartMuLa/HeartMuLa-RL-oss-3B-20260123/resolve/main/model-00002-of-00004.safetensors",
+  "rel": "HeartMuLa/HeartMuLa-oss-3B-happy-new-year/model-00002-of-00004.safetensors",
+  "size": 4932808592,
+  "sha256": "eae31b37e40b0d6d2dc75ee313dde6a0687322d1430c6681bf8eb7d5ba394a70",
+  "present": false,
+  "templates": [
+   "HeartMuLa/HeartMuLa-RL-oss-3B-20260123"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/HeartMuLa/HeartMuLa-RL-oss-3B-20260123/resolve/main/model-00003-of-00004.safetensors",
+  "rel": "HeartMuLa/HeartMuLa-oss-3B-happy-new-year/model-00003-of-00004.safetensors",
+  "size": 4935901576,
+  "sha256": "66676f07af6ce2739053c5edef585b50ab6c3ac709e74ab47b1c79773ccdbfda",
+  "present": false,
+  "templates": [
+   "HeartMuLa/HeartMuLa-RL-oss-3B-20260123"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/HeartMuLa/HeartMuLa-RL-oss-3B-20260123/resolve/main/model-00004-of-00004.safetensors",
+  "rel": "HeartMuLa/HeartMuLa-oss-3B-happy-new-year/model-00004-of-00004.safetensors",
+  "size": 950588000,
+  "sha256": "3f63bfe7120ece5bba84dbabc033167bf605b2ac38067f7040178377aaaaad8f",
+  "present": false,
+  "templates": [
+   "HeartMuLa/HeartMuLa-RL-oss-3B-20260123"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/HeartMuLa/HeartMuLa-RL-oss-3B-20260123/resolve/main/model.safetensors.index.json",
+  "rel": "HeartMuLa/HeartMuLa-oss-3B-happy-new-year/model.safetensors.index.json",
+  "size": 22579,
+  "sha256": "-",
+  "present": false,
+  "templates": [
+   "HeartMuLa/HeartMuLa-RL-oss-3B-20260123"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/HeartMuLa/HeartCodec-oss-20260123/resolve/main/config.json",
+  "rel": "HeartMuLa/HeartCodec-oss-20260123/config.json",
+  "size": 981,
+  "sha256": "-",
+  "present": false,
+  "templates": [
+   "HeartMuLa/HeartCodec-oss-20260123"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/HeartMuLa/HeartCodec-oss-20260123/resolve/main/model-00001-of-00002.safetensors",
+  "rel": "HeartMuLa/HeartCodec-oss-20260123/model-00001-of-00002.safetensors",
+  "size": 4930472472,
+  "sha256": "50d2c022468a0e127992d99e02117d2efbad2b10fddc8ceaf09550f154e185d4",
+  "present": false,
+  "templates": [
+   "HeartMuLa/HeartCodec-oss-20260123"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/HeartMuLa/HeartCodec-oss-20260123/resolve/main/model-00002-of-00002.safetensors",
+  "rel": "HeartMuLa/HeartCodec-oss-20260123/model-00002-of-00002.safetensors",
+  "size": 1707911436,
+  "sha256": "6f319d0f5b31858dfe98bd8fc89d3083cbfff74ac75a0531f1a7b86949197917",
+  "present": false,
+  "templates": [
+   "HeartMuLa/HeartCodec-oss-20260123"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/HeartMuLa/HeartCodec-oss-20260123/resolve/main/model.safetensors.index.json",
+  "rel": "HeartMuLa/HeartCodec-oss-20260123/model.safetensors.index.json",
+  "size": 83875,
+  "sha256": "-",
+  "present": false,
+  "templates": [
+   "HeartMuLa/HeartCodec-oss-20260123"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/HeartMuLa/HeartTranscriptor-oss/resolve/main/added_tokens.json",
+  "rel": "HeartMuLa/HeartTranscriptor-oss/added_tokens.json",
+  "size": 34604,
+  "sha256": "-",
+  "present": false,
+  "templates": [
+   "HeartMuLa/HeartTranscriptor-oss"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/HeartMuLa/HeartTranscriptor-oss/resolve/main/config.json",
+  "rel": "HeartMuLa/HeartTranscriptor-oss/config.json",
+  "size": 1328,
+  "sha256": "-",
+  "present": false,
+  "templates": [
+   "HeartMuLa/HeartTranscriptor-oss"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/HeartMuLa/HeartTranscriptor-oss/resolve/main/generation_config.json",
+  "rel": "HeartMuLa/HeartTranscriptor-oss/generation_config.json",
+  "size": 3727,
+  "sha256": "-",
+  "present": false,
+  "templates": [
+   "HeartMuLa/HeartTranscriptor-oss"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/HeartMuLa/HeartTranscriptor-oss/resolve/main/merges.txt",
+  "rel": "HeartMuLa/HeartTranscriptor-oss/merges.txt",
+  "size": 493869,
+  "sha256": "-",
+  "present": false,
+  "templates": [
+   "HeartMuLa/HeartTranscriptor-oss"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/HeartMuLa/HeartTranscriptor-oss/resolve/main/model.safetensors",
+  "rel": "HeartMuLa/HeartTranscriptor-oss/model.safetensors",
+  "size": 3055544304,
+  "sha256": "9e09145b687c26330da96ad2d7ca1fe542d46247700a43a3156b924a6b6e6a07",
+  "present": false,
+  "templates": [
+   "HeartMuLa/HeartTranscriptor-oss"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/HeartMuLa/HeartTranscriptor-oss/resolve/main/normalizer.json",
+  "rel": "HeartMuLa/HeartTranscriptor-oss/normalizer.json",
+  "size": 52666,
+  "sha256": "-",
+  "present": false,
+  "templates": [
+   "HeartMuLa/HeartTranscriptor-oss"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/HeartMuLa/HeartTranscriptor-oss/resolve/main/preprocessor_config.json",
+  "rel": "HeartMuLa/HeartTranscriptor-oss/preprocessor_config.json",
+  "size": 184990,
+  "sha256": "-",
+  "present": false,
+  "templates": [
+   "HeartMuLa/HeartTranscriptor-oss"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/HeartMuLa/HeartTranscriptor-oss/resolve/main/special_tokens_map.json",
+  "rel": "HeartMuLa/HeartTranscriptor-oss/special_tokens_map.json",
+  "size": 2194,
+  "sha256": "-",
+  "present": false,
+  "templates": [
+   "HeartMuLa/HeartTranscriptor-oss"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/HeartMuLa/HeartTranscriptor-oss/resolve/main/tokenizer.json",
+  "rel": "HeartMuLa/HeartTranscriptor-oss/tokenizer.json",
+  "size": 2480466,
+  "sha256": "-",
+  "present": false,
+  "templates": [
+   "HeartMuLa/HeartTranscriptor-oss"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/HeartMuLa/HeartTranscriptor-oss/resolve/main/tokenizer_config.json",
+  "rel": "HeartMuLa/HeartTranscriptor-oss/tokenizer_config.json",
+  "size": 282683,
+  "sha256": "-",
+  "present": false,
+  "templates": [
+   "HeartMuLa/HeartTranscriptor-oss"
+  ]
+ },
+ {
+  "url": "https://huggingface.co/HeartMuLa/HeartTranscriptor-oss/resolve/main/vocab.json",
+  "rel": "HeartMuLa/HeartTranscriptor-oss/vocab.json",
+  "size": 835550,
+  "sha256": "-",
+  "present": false,
+  "templates": [
+   "HeartMuLa/HeartTranscriptor-oss"
+  ]
+ }
+]

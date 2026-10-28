@@ -1,0 +1,165 @@
+{
+ "4": {
+  "inputs": {
+   "vae_name": "vae_128d_48k_fp16.safetensors",
+   "synchformer_name": "synchformer_state_dict_fp16.safetensors"
+  },
+  "class_type": "HunyuanDependenciesLoader",
+  "_meta": {
+   "title": "Hunyuan-Foley Dependencies Loader"
+  }
+ },
+ "17": {
+  "inputs": {
+   "index": 1,
+   "audio_batch": [
+    "40",
+    1
+   ]
+  },
+  "class_type": "SelectAudioFromBatch",
+  "_meta": {
+   "title": "Select Audio From Batch"
+  }
+ },
+ "23": {
+  "inputs": {
+   "audio": [
+    "17",
+    0
+   ]
+  },
+  "class_type": "PreviewAudio",
+  "_meta": {
+   "title": "Preview Audio"
+  }
+ },
+ "40": {
+  "inputs": {
+   "frame_rate": 24,
+   "duration": 10,
+   "prompt": "A dog's tongue lapping against the bowl of water.  The metal water bowl slides on the concrete floor.",
+   "negative_prompt": "noisy, harsh, crash, bang",
+   "cfg_scale": 4.5,
+   "steps": 50,
+   "sampler": "euler",
+   "batch_size": 1,
+   "seed": 55574,
+   "force_offload": false,
+   "hunyuan_model": [
+    "73",
+    0
+   ],
+   "hunyuan_deps": [
+    "4",
+    0
+   ],
+   "image": [
+    "71",
+    0
+   ],
+   "torch_compile_cfg": [
+    "75",
+    0
+   ],
+   "block_swap_args": [
+    "74",
+    0
+   ]
+  },
+  "class_type": "HunyuanFoleySampler",
+  "_meta": {
+   "title": "Hunyuan-Foley Sampler"
+  }
+ },
+ "57": {
+  "inputs": {
+   "frame_rate": 24,
+   "loop_count": 0,
+   "filename_prefix": "AnimateDiff",
+   "format": "video/h264-mp4",
+   "pix_fmt": "yuv420p",
+   "crf": 19,
+   "save_metadata": false,
+   "trim_to_audio": false,
+   "pingpong": false,
+   "save_output": false,
+   "images": [
+    "71",
+    0
+   ],
+   "audio": [
+    "40",
+    0
+   ]
+  },
+  "class_type": "VHS_VideoCombine",
+  "_meta": {
+   "title": "Video Combine 🎥🅥🅗🅢"
+  }
+ },
+ "58": {
+  "inputs": {
+   "audio": [
+    "40",
+    0
+   ]
+  },
+  "class_type": "PreviewAudio",
+  "_meta": {
+   "title": "Preview Audio"
+  }
+ },
+ "71": {
+  "inputs": {
+   "video": "",
+   "force_rate": 0,
+   "custom_width": 512,
+   "custom_height": 0,
+   "frame_load_cap": 0,
+   "skip_first_frames": 0,
+   "select_every_nth": 1,
+   "format": "AnimateDiff"
+  },
+  "class_type": "VHS_LoadVideoPath",
+  "_meta": {
+   "title": "Load Video (Path) 🎥🅥🅗🅢"
+  }
+ },
+ "73": {
+  "inputs": {
+   "model_name": "hunyuanvideo_foley_fp8_e4m3fn.safetensors",
+   "precision": "bf16",
+   "quantization": "auto"
+  },
+  "class_type": "HunyuanModelLoader",
+  "_meta": {
+   "title": "Hunyuan-Foley Model Loader"
+  }
+ },
+ "74": {
+  "inputs": {
+   "blocks_to_swap": 30,
+   "use_non_blocking": false,
+   "prefetch_blocks": 1,
+   "block_swap_debug": false
+  },
+  "class_type": "HunyuanBlockSwap",
+  "_meta": {
+   "title": "Hunyuan-Foley BlockSwap Settings"
+  }
+ },
+ "75": {
+  "inputs": {
+   "backend": "inductor",
+   "fullgraph": false,
+   "mode": "default",
+   "dynamic": "false",
+   "dynamo_cache_limit": 64
+  },
+  "class_type": "HunyuanFoleyTorchCompile",
+  "_meta": {
+   "title": "Hunyuan-Foley Torch Compile"
+  }
+ }
+}

@@ -1,0 +1,196 @@
+{
+ "9": {
+  "inputs": {
+   "image": "modern_living_room.png"
+  },
+  "class_type": "LoadImage",
+  "_meta": {
+   "title": "Load Image"
+  }
+ },
+ "21": {
+  "inputs": {
+   "filename_prefix": "3d/ComfyUI",
+   "image": "",
+   "mesh": [
+    "67:54",
+    0
+   ]
+  },
+  "class_type": "SaveGLB",
+  "_meta": {
+   "title": "Save 3D Model"
+  }
+ },
+ "46": {
+  "inputs": {
+   "images": [
+    "67:63",
+    0
+   ]
+  },
+  "class_type": "PreviewImage",
+  "_meta": {
+   "title": "Preview Image (normal_opengl)"
+  }
+ },
+ "47": {
+  "inputs": {
+   "images": [
+    "67:64",
+    0
+   ]
+  },
+  "class_type": "PreviewImage",
+  "_meta": {
+   "title": "Preview Image (normal_directx)"
+  }
+ },
+ "67:54": {
+  "inputs": {
+   "batch_index": 0,
+   "decimation": 1,
+   "discontinuity_threshold": 0.04,
+   "texture": true,
+   "moge_geometry": [
+    "67:55",
+    0
+   ]
+  },
+  "class_type": "MoGePointMapToMesh",
+  "_meta": {
+   "title": "Convert MoGe Point Map to Mesh"
+  }
+ },
+ "67:55": {
+  "inputs": {
+   "resolution_level": 9,
+   "fov_x_degrees": 0,
+   "batch_size": 4,
+   "force_projection": true,
+   "apply_mask": true,
+   "moge_model": [
+    "67:58",
+    0
+   ],
+   "image": [
+    "67:66",
+    0
+   ]
+  },
+  "class_type": "MoGeInference",
+  "_meta": {
+   "title": "Run MoGe Inference"
+  }
+ },
+ "67:58": {
+  "inputs": {
+   "model_name": "moge_2_vitl_normal_fp16.safetensors"
+  },
+  "class_type": "LoadMoGeModel",
+  "_meta": {
+   "title": "Load MoGe Model"
+  }
+ },
+ "67:59": {
+  "inputs": {
+   "expression": "a > 2048",
+   "values.a": [
+    "67:60",
+    0
+   ]
+  },
+  "class_type": "ComfyMathExpression",
+  "_meta": {
+   "title": "Math Expression"
+  }
+ },
+ "67:60": {
+  "inputs": {
+   "image": [
+    "9",
+    0
+   ]
+  },
+  "class_type": "GetImageSize",
+  "_meta": {
+   "title": "Get Image Size"
+  }
+ },
+ "67:61": {
+  "inputs": {
+   "longer_edge": 2048,
+   "images": [
+    "9",
+    0
+   ]
+  },
+  "class_type": "ResizeImagesByLongerEdge",
+  "_meta": {
+   "title": "Resize Images by Longer Edge (DEPRECATED)"
+  }
+ },
+ "67:62": {
+  "inputs": {
+   "switch": [
+    "67:59",
+    2
+   ],
+   "on_false": [
+    "9",
+    0
+   ],
+   "on_true": [
+    "67:61",
+    0
+   ]
+  },
+  "class_type": "ComfySwitchNode",
+  "_meta": {
+   "title": "If/Else Switch"
+  }
+ },
+ "67:63": {
+  "inputs": {
+   "output": "normal_opengl",
+   "moge_geometry": [
+    "67:55",
+    0
+   ]
+  },
+  "class_type": "MoGeRender",
+  "_meta": {
+   "title": "Render MoGe Geometry"
+  }
+ },
+ "67:64": {
+  "inputs": {
+   "output": "normal_directx",
+   "moge_geometry": [
+    "67:55",
+    0
+   ]
+  },
+  "class_type": "MoGeRender",
+  "_meta": {
+   "title": "Render MoGe Geometry"
+  }
+ },
+ "67:66": {
+  "inputs": {
+   "switch": true,
+   "on_false": [
+    "9",
+    0
+   ],
+   "on_true": [
+    "67:62",
+    0
+   ]
+  },
+  "class_type": "ComfySwitchNode",
+  "_meta": {
+   "title": "If/Else Switch"
+  }
+ }
+}

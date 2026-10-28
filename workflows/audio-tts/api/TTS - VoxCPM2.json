@@ -1,0 +1,55 @@
+{
+ "1": {
+  "inputs": {
+   "filename_prefix": "audio/VoxCPM",
+   "audio": [
+    "24",
+    0
+   ]
+  },
+  "class_type": "SaveAudio",
+  "_meta": {
+   "title": "Save Audio (FLAC) (DEPRECATED)"
+  }
+ },
+ "23": {
+  "inputs": {
+   "min_tokens": 2,
+   "max_tokens": 2048,
+   "temperature": 1,
+   "sway": 1,
+   "use_cfg_zero_star": true,
+   "retry_max_attempts": 3,
+   "retry_threshold": 6,
+   "download_progress": ""
+  },
+  "class_type": "VoxCPM_AdvancedParams",
+  "_meta": {
+   "title": "VoxCPM Advanced Parameters"
+  }
+ },
+ "24": {
+  "inputs": {
+   "model_name": "VoxCPM2",
+   "lora_name": "None",
+   "text": "Привет! Это VoxCPM2: выразительный синтез речи на русском с частотой 48 килогерц.",
+   "voice_design": "",
+   "cfg": 2,
+   "steps": 10,
+   "normalize_text": false,
+   "seed": 44049569499043,
+   "force_offload": false,
+   "device": "cuda",
+   "dtype": "auto",
+   "download_progress": "",
+   "advanced_params": [
+    "23",
+    0
+   ]
+  },
+  "class_type": "VoxCPM_TTS",
+  "_meta": {
+   "title": "VoxCPM TTS"
+  }
+ }
+}

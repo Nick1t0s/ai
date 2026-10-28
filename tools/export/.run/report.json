@@ -1,0 +1,44 @@
+[
+ {
+  "src": "/home/nik/ai/comfyui/user/default/workflows/Upscale - SeedVR2 7B Sharp fp16 (фото).json",
+  "cat": "utility",
+  "kind": "own",
+  "id": "Upscale - SeedVR2 7B Sharp fp16 (фото)",
+  "name": "Upscale - SeedVR2 7B Sharp fp16 (фото)",
+  "ok": true,
+  "nodes": 13,
+  "logs": []
+ },
+ {
+  "src": "/home/nik/ai/comfyui/user/default/workflows/Upscale - SeedVR2 7B (видео).json",
+  "cat": "utility",
+  "kind": "own",
+  "id": "Upscale - SeedVR2 7B (видео)",
+  "name": "Upscale - SeedVR2 7B (видео)",
+  "ok": true,
+  "nodes": 20,
+  "logs": []
+ },
+ {
+  "src": "/home/nik/ai/comfyui/user/default/workflows/Upscale - Фото 4K (Z-Image + SeedVR2 7B).json",
+  "cat": "utility",
+  "kind": "own",
+  "id": "Upscale - Фото 4K (Z-Image + SeedVR2 7B)",
+  "name": "Upscale - Фото 4K (Z-Image + SeedVR2 7B)",
+  "ok": true,
+  "nodes": 27,
+  "logs": [
+   "warning: [proxyWidgetMigration] source widget has no backing input slot; quarantining Object"
+  ]
+ },
+ {
+  "src": "/home/nik/ai/comfyui/user/default/workflows/Upscale - Аниме hires-fix (Illustrious).json",
+  "cat": "utility",
+  "kind": "own",
+  "id": "Upscale - Аниме hires-fix (Illustrious)",
+  "name": "Upscale - Аниме hires-fix (Illustrious)",
+  "ok": true,
+  "nodes": 13,
+  "logs": []
+ }
+]

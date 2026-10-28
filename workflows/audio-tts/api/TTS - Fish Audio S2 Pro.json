@@ -1,0 +1,151 @@
+{
+ "2": {
+  "inputs": {
+   "audio": [
+    "42",
+    0
+   ]
+  },
+  "class_type": "PreviewAudio",
+  "_meta": {
+   "title": "Preview Audio"
+  }
+ },
+ "14": {
+  "inputs": {
+   "model_path": "s2-pro-fp8",
+   "text": "Привет! [excited] Это мой клонированный голос.",
+   "language": "auto",
+   "device": "auto",
+   "precision": "auto",
+   "attention": "auto",
+   "max_new_tokens": 0,
+   "chunk_length": 200,
+   "temperature": 0.7,
+   "top_p": 0.7,
+   "repetition_penalty": 1.2,
+   "seed": 42,
+   "keep_model_loaded": true,
+   "offload_to_cpu": true,
+   "compile_model": false,
+   "reference_text": "Сюда вставьте точный текст того, что звучит в референсном аудио.",
+   "reference_audio": [
+    "15",
+    0
+   ]
+  },
+  "class_type": "FishS2VoiceCloneTTS",
+  "_meta": {
+   "title": "Fish S2 Voice Clone TTS"
+  }
+ },
+ "15": {
+  "inputs": {
+   "audio": "sample-2.mp3"
+  },
+  "class_type": "LoadAudio",
+  "_meta": {
+   "title": "Load Audio"
+  }
+ },
+ "16": {
+  "inputs": {
+   "audio": [
+    "14",
+    0
+   ]
+  },
+  "class_type": "PreviewAudio",
+  "_meta": {
+   "title": "Preview Audio"
+  }
+ },
+ "17": {
+  "inputs": {
+   "audio": "sample-1.mp3"
+  },
+  "class_type": "LoadAudio",
+  "_meta": {
+   "title": "Speaker 1"
+  }
+ },
+ "18": {
+  "inputs": {
+   "audio": "sample-2.mp3"
+  },
+  "class_type": "LoadAudio",
+  "_meta": {
+   "title": "Speaker 2"
+  }
+ },
+ "19": {
+  "inputs": {
+   "audio": [
+    "41",
+    0
+   ]
+  },
+  "class_type": "PreviewAudio",
+  "_meta": {
+   "title": "Preview Audio"
+  }
+ },
+ "41": {
+  "inputs": {
+   "model_path": "s2-pro-fp8",
+   "text": "[speaker_1]: Привет, я первый голос.\n[speaker_2]: А я второй! Нас озвучивает Fish Audio S2.",
+   "language": "auto",
+   "device": "auto",
+   "precision": "auto",
+   "attention": "auto",
+   "max_new_tokens": 0,
+   "chunk_length": 200,
+   "temperature": 0.7,
+   "top_p": 0.7,
+   "repetition_penalty": 1.2,
+   "seed": 42,
+   "keep_model_loaded": true,
+   "offload_to_cpu": true,
+   "compile_model": false,
+   "pause_after_speaker": 0.3,
+   "num_speakers": "2",
+   "num_speakers.speaker_1_ref_text": "",
+   "num_speakers.speaker_2_ref_text": "",
+   "num_speakers.speaker_1_audio": [
+    "18",
+    0
+   ],
+   "num_speakers.speaker_2_audio": [
+    "17",
+    0
+   ]
+  },
+  "class_type": "FishS2MultiSpeakerTTS",
+  "_meta": {
+   "title": "Fish S2 Multi-Speaker TTS"
+  }
+ },
+ "42": {
+  "inputs": {
+   "model_path": "s2-pro-fp8",
+   "text": "Привет! [excited] Это Fish Audio S2, синтез речи на русском.",
+   "language": "auto",
+   "device": "auto",
+   "precision": "auto",
+   "attention": "auto",
+   "max_new_tokens": 192,
+   "chunk_length": 200,
+   "temperature": 0.7,
+   "top_p": 0.7,
+   "repetition_penalty": 1.2,
+   "seed": 42,
+   "keep_model_loaded": true,
+   "offload_to_cpu": true,
+   "compile_model": false
+  },
+  "class_type": "FishS2TTS",
+  "_meta": {
+   "title": "Fish S2 TTS"
+  }
+ }
+}

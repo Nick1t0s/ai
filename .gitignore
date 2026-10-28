@@ -1,0 +1,28 @@
+# ComfyUI (large models & weights)
+comfyui/
+comfyui
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Environment and secrets
+.env
+*.env.local
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs & temp files
+*.log
+tmp/
+temp/

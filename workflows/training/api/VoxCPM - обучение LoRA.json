@@ -1,0 +1,65 @@
+{
+ "16": {
+  "inputs": {
+   "source": [
+    "19",
+    0
+   ]
+  },
+  "class_type": "PreviewAny",
+  "_meta": {
+   "title": "Preview as Text"
+  }
+ },
+ "18": {
+  "inputs": {
+   "audio_directory": "C:\\_Dev\\lora",
+   "output_filename": "train.jsonl"
+  },
+  "class_type": "VoxCPM_DatasetMaker",
+  "_meta": {
+   "title": "VoxCPM Dataset Maker"
+  }
+ },
+ "19": {
+  "inputs": {
+   "base_model_name": "VoxCPM1.5",
+   "dataset_path": [
+    "18",
+    0
+   ],
+   "output_name": "my_lora_v1",
+   "max_steps": 1000,
+   "save_every_steps": 200,
+   "num_workers": 0,
+   "train_config": [
+    "20",
+    0
+   ]
+  },
+  "class_type": "VoxCPM_LoraTrainer",
+  "_meta": {
+   "title": "VoxCPM LoRA Trainer"
+  }
+ },
+ "20": {
+  "inputs": {
+   "learning_rate": 0.0001,
+   "lora_rank": 32,
+   "lora_alpha": 16,
+   "lora_dropout": 0,
+   "warmup_steps": 100,
+   "grad_accum_steps": 1,
+   "max_batch_tokens": 8192,
+   "sample_rate": 44100,
+   "weight_decay": 0.01,
+   "enable_lm_lora": true,
+   "enable_dit_lora": true,
+   "enable_proj_lora": false
+  },
+  "class_type": "VoxCPM_TrainConfig",
+  "_meta": {
+   "title": "VoxCPM Train Config"
+  }
+ }
+}

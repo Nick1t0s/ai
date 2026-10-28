@@ -1,0 +1,526 @@
+{
+ "id": "0c358f16-3754-4bd2-be92-3d9f3f96d48c",
+ "revision": 0,
+ "last_node_id": 42,
+ "last_link_id": 42,
+ "nodes": [
+  {
+   "id": 19,
+   "type": "PreviewAudio",
+   "pos": [
+    -551.2306813622239,
+    1542.9618774733426
+   ],
+   "size": [
+    389.3472371792841,
+    126.87310597423561
+   ],
+   "flags": {},
+   "order": 13,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "audio",
+     "type": "AUDIO",
+     "link": 39
+    }
+   ],
+   "outputs": [],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.16.4",
+    "Node name for S&R": "PreviewAudio"
+   },
+   "widgets_values": []
+  },
+  {
+   "id": 18,
+   "type": "LoadAudio",
+   "pos": [
+    -547.9653639823974,
+    786.82150091903
+   ],
+   "size": [
+    379.8985321448199,
+    137.18412290060564
+   ],
+   "flags": {},
+   "order": 2,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "AUDIO",
+     "type": "AUDIO",
+     "links": [
+      40
+     ]
+    }
+   ],
+   "title": "Speaker 2",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.16.4",
+    "Node name for S&R": "LoadAudio"
+   },
+   "widgets_values": [
+    "sample-2.mp3",
+    null,
+    null
+   ]
+  },
+  {
+   "id": 17,
+   "type": "LoadAudio",
+   "pos": [
+    -550.1711054567234,
+    602.2716313977381
+   ],
+   "size": [
+    379.8985321448199,
+    137.18412290060564
+   ],
+   "flags": {},
+   "order": 3,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "AUDIO",
+     "type": "AUDIO",
+     "links": [
+      41
+     ]
+    }
+   ],
+   "title": "Speaker 1",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.16.4",
+    "Node name for S&R": "LoadAudio"
+   },
+   "widgets_values": [
+    "sample-1.mp3",
+    null,
+    null
+   ]
+  },
+  {
+   "id": 15,
+   "type": "LoadAudio",
+   "pos": [
+    -979.5454167609595,
+    611.359226272031
+   ],
+   "size": [
+    379.8985321448199,
+    137.18412290060564
+   ],
+   "flags": {},
+   "order": 4,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "AUDIO",
+     "type": "AUDIO",
+     "links": [
+      14
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.16.4",
+    "Node name for S&R": "LoadAudio"
+   },
+   "widgets_values": [
+    "sample-2.mp3",
+    null,
+    null
+   ]
+  },
+  {
+   "id": 16,
+   "type": "PreviewAudio",
+   "pos": [
+    -983.3921914261992,
+    1504.496082302565
+   ],
+   "size": [
+    389.3472371792841,
+    126.87310597423561
+   ],
+   "flags": {},
+   "order": 17,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "audio",
+     "type": "AUDIO",
+     "link": 15
+    }
+   ],
+   "outputs": [],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.16.4",
+    "Node name for S&R": "PreviewAudio"
+   },
+   "widgets_values": []
+  },
+  {
+   "id": 22,
+   "type": "MarkdownNote",
+   "pos": [
+    -126.62949137478357,
+    576.1630697439277
+   ],
+   "size": [
+    546.1582812039053,
+    834.4829895379138
+   ],
+   "flags": {},
+   "order": 8,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "properties": {},
+   "widgets_values": [
+    "# Fish Audio S2 Pro (fp8)\n\nМодель уже скачана в `models/fishaudioS2/s2-pro-fp8`. Выбирайте **s2-pro-fp8**.\n\n- **FishS2TTS** — речь по тексту; эмоции в квадратных скобках: [excited], [whisper], [laughing]…\n- **FishS2VoiceCloneTTS** — клон голоса: загрузите 10–30 с чистой речи в LoadAudio и **впишите её точный текст** в reference_text.\n- **FishS2MultiSpeakerTTS** — диалог: [speaker_1]: …  [speaker_2]: …, на каждого свой LoadAudio.\n\nЛицензия Fish Audio Research: бесплатно только некоммерческое использование."
+   ],
+   "color": "#c09430",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 2,
+   "type": "PreviewAudio",
+   "pos": [
+    -1424.3566879270684,
+    1084.7592682351908
+   ],
+   "size": [
+    389.3472371792841,
+    126.87310597423561
+   ],
+   "flags": {},
+   "order": 12,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "audio",
+     "type": "AUDIO",
+     "link": 42
+    }
+   ],
+   "outputs": [],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.16.4",
+    "Node name for S&R": "PreviewAudio"
+   },
+   "widgets_values": []
+  },
+  {
+   "id": 41,
+   "type": "FishS2MultiSpeakerTTS",
+   "pos": [
+    -558.6896109857566,
+    958.5808953361638
+   ],
+   "size": [
+    400,
+    564
+   ],
+   "flags": {},
+   "order": 10,
+   "mode": 0,
+   "inputs": [
+    {
+     "label": "speaker_1_audio",
+     "name": "num_speakers.speaker_1_audio",
+     "shape": 7,
+     "type": "AUDIO",
+     "link": 40
+    },
+    {
+     "label": "speaker_2_audio",
+     "name": "num_speakers.speaker_2_audio",
+     "shape": 7,
+     "type": "AUDIO",
+     "link": 41
+    }
+   ],
+   "outputs": [
+    {
+     "name": "audio",
+     "type": "AUDIO",
+     "links": [
+      39
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "ComfyUI-fish-audio-s2",
+    "ver": "e85aeca472fbffca7b6806feb6792903780fb15f",
+    "Node name for S&R": "FishS2MultiSpeakerTTS"
+   },
+   "widgets_values": [
+    "s2-pro-fp8",
+    "[speaker_1]: Привет, я первый голос.\n[speaker_2]: А я второй! Нас озвучивает Fish Audio S2.",
+    "auto",
+    "auto",
+    "auto",
+    "auto",
+    0,
+    200,
+    0.7,
+    0.7,
+    1.2,
+    42,
+    "fixed",
+    true,
+    true,
+    false,
+    0.3,
+    "2",
+    "",
+    ""
+   ]
+  },
+  {
+   "id": 14,
+   "type": "FishS2VoiceCloneTTS",
+   "pos": [
+    -982.7384828344611,
+    807.3007714331799
+   ],
+   "size": [
+    389.0623462500148,
+    649.9654076059737
+   ],
+   "flags": {},
+   "order": 16,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "reference_audio",
+     "type": "AUDIO",
+     "link": 14
+    },
+    {
+     "name": "reference_text",
+     "shape": 7,
+     "type": "STRING",
+     "widget": {
+      "name": "reference_text"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "audio",
+     "type": "AUDIO",
+     "links": [
+      15
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "ComfyUI-fish-audio-s2",
+    "ver": "b61bec15d943c1c84909b1bc93b77a862986745f",
+    "Node name for S&R": "FishS2VoiceCloneTTS",
+    "aux_id": "Saganaki22/ComfyUI-FishAudioS2"
+   },
+   "widgets_values": [
+    "s2-pro-fp8",
+    "Привет! [excited] Это мой клонированный голос.",
+    "auto",
+    "auto",
+    "auto",
+    "auto",
+    0,
+    200,
+    0.7,
+    0.7,
+    1.2,
+    42,
+    "fixed",
+    true,
+    true,
+    false,
+    "Сюда вставьте точный текст того, что звучит в референсном аудио."
+   ]
+  },
+  {
+   "id": 42,
+   "type": "FishS2TTS",
+   "pos": [
+    -1428.1616503783164,
+    601.1930131820274
+   ],
+   "size": [
+    400,
+    448
+   ],
+   "flags": {},
+   "order": 9,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "audio",
+     "type": "AUDIO",
+     "links": [
+      42
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "ComfyUI-fish-audio-s2",
+    "ver": "4dfc9e08ceaa7956f27f2857bff511b9ed75dc95",
+    "Node name for S&R": "FishS2TTS"
+   },
+   "widgets_values": [
+    "s2-pro-fp8",
+    "Привет! [excited] Это Fish Audio S2, синтез речи на русском.",
+    "auto",
+    "auto",
+    "auto",
+    "auto",
+    192,
+    200,
+    0.7,
+    0.7,
+    1.2,
+    42,
+    "fixed",
+    true,
+    true,
+    false
+   ]
+  }
+ ],
+ "links": [
+  [
+   14,
+   15,
+   0,
+   14,
+   0,
+   "AUDIO"
+  ],
+  [
+   15,
+   14,
+   0,
+   16,
+   0,
+   "AUDIO"
+  ],
+  [
+   39,
+   41,
+   0,
+   19,
+   0,
+   "AUDIO"
+  ],
+  [
+   40,
+   18,
+   0,
+   41,
+   0,
+   "AUDIO"
+  ],
+  [
+   41,
+   17,
+   0,
+   41,
+   1,
+   "AUDIO"
+  ],
+  [
+   42,
+   42,
+   0,
+   2,
+   0,
+   "AUDIO"
+  ]
+ ],
+ "groups": [
+  {
+   "id": 1,
+   "title": "TTS",
+   "bounding": [
+    -1438.1616503783164,
+    537.0475530879222,
+    420,
+    679.2955447462447
+   ],
+   "color": "#3f789e",
+   "font_size": 24,
+   "flags": {}
+  },
+  {
+   "id": 2,
+   "title": "Voice Clone",
+   "bounding": [
+    -993.3921914261992,
+    537.759226272031,
+    409.7160548417529,
+    1103.6099620047694
+   ],
+   "color": "#3f789e",
+   "font_size": 24,
+   "flags": {}
+  },
+  {
+   "id": 3,
+   "title": "Multi Speaker Clone",
+   "bounding": [
+    -563.1121501849206,
+    538.2299846925577,
+    412.83792936131067,
+    1141.6049987550205
+   ],
+   "color": "#3f789e",
+   "font_size": 24,
+   "flags": {}
+  },
+  {
+   "id": 4,
+   "title": "whisper STT Voice Clone (Optional)",
+   "bounding": [
+    -1580.9366504913753,
+    1238.7886077431253,
+    570.0600840908683,
+    315.11192822560145
+   ],
+   "color": "#a1309b",
+   "font_size": 24,
+   "flags": {}
+  }
+ ],
+ "config": {},
+ "extra": {
+  "workflowRendererVersion": "LG",
+  "ds": {
+   "scale": 0.5644739300537773,
+   "offset": [
+    2593.0797507362377,
+    3.8859122242610056
+   ]
+  },
+  "frontendVersion": "1.41.18",
+  "VHS_latentpreview": false,
+  "VHS_latentpreviewrate": 0,
+  "VHS_MetadataImage": true,
+  "VHS_KeepIntermediate": true
+ },
+ "version": 0.4
+}

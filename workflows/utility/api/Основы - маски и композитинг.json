@@ -1,0 +1,511 @@
+{
+ "1": {
+  "inputs": {
+   "width": 1024,
+   "height": 1024,
+   "batch_size": 1,
+   "color": 0
+  },
+  "class_type": "EmptyImage",
+  "_meta": {
+   "title": "Empty Image"
+  }
+ },
+ "2": {
+  "inputs": {
+   "images": [
+    "1",
+    0
+   ]
+  },
+  "class_type": "PreviewImage",
+  "_meta": {
+   "title": "Preview Image"
+  }
+ },
+ "3": {
+  "inputs": {
+   "mask": [
+    "5",
+    0
+   ]
+  },
+  "class_type": "MaskToImage",
+  "_meta": {
+   "title": "Convert Mask to Image"
+  }
+ },
+ "4": {
+  "inputs": {
+   "mask": [
+    "5",
+    0
+   ]
+  },
+  "class_type": "MaskPreview",
+  "_meta": {
+   "title": "Preview Mask"
+  }
+ },
+ "5": {
+  "inputs": {
+   "channel": "red",
+   "image": [
+    "1",
+    0
+   ]
+  },
+  "class_type": "ImageToMask",
+  "_meta": {
+   "title": "Convert Image to Mask"
+  }
+ },
+ "326": {
+  "inputs": {
+   "images": [
+    "3",
+    0
+   ]
+  },
+  "class_type": "PreviewImage",
+  "_meta": {
+   "title": "Preview Image"
+  }
+ },
+ "327": {
+  "inputs": {
+   "mask": [
+    "5",
+    0
+   ]
+  },
+  "class_type": "InvertMask",
+  "_meta": {
+   "title": "Invert Mask"
+  }
+ },
+ "328": {
+  "inputs": {
+   "mask": [
+    "327",
+    0
+   ]
+  },
+  "class_type": "MaskPreview",
+  "_meta": {
+   "title": "Preview Mask"
+  }
+ },
+ "338": {
+  "inputs": {
+   "value": 0.4099999999999999,
+   "mask": [
+    "5",
+    0
+   ]
+  },
+  "class_type": "ThresholdMask",
+  "_meta": {
+   "title": "Threshold Mask"
+  }
+ },
+ "340": {
+  "inputs": {
+   "mask": [
+    "338",
+    0
+   ]
+  },
+  "class_type": "MaskPreview",
+  "_meta": {
+   "title": "Preview Mask"
+  }
+ },
+ "342": {
+  "inputs": {
+   "left": 200,
+   "top": 0,
+   "right": 0,
+   "bottom": 0,
+   "mask": [
+    "327",
+    0
+   ]
+  },
+  "class_type": "FeatherMask",
+  "_meta": {
+   "title": "Feather Mask"
+  }
+ },
+ "343": {
+  "inputs": {
+   "mask": [
+    "342",
+    0
+   ]
+  },
+  "class_type": "MaskPreview",
+  "_meta": {
+   "title": "Preview Mask"
+  }
+ },
+ "359": {
+  "inputs": {
+   "x": 0,
+   "y": 0,
+   "resize_source": false,
+   "destination": [
+    "1",
+    0
+   ],
+   "source": [
+    "360",
+    0
+   ],
+   "mask": [
+    "394",
+    0
+   ]
+  },
+  "class_type": "ImageCompositeMasked",
+  "_meta": {
+   "title": "Image Composite Masked"
+  }
+ },
+ "360": {
+  "inputs": {
+   "width": 1024,
+   "height": 1024,
+   "batch_size": 1,
+   "color": 16711680
+  },
+  "class_type": "EmptyImage",
+  "_meta": {
+   "title": "Empty Image"
+  }
+ },
+ "367": {
+  "inputs": {
+   "images": [
+    "360",
+    0
+   ]
+  },
+  "class_type": "PreviewImage",
+  "_meta": {
+   "title": "Preview Image"
+  }
+ },
+ "368": {
+  "inputs": {
+   "images": [
+    "359",
+    0
+   ]
+  },
+  "class_type": "PreviewImage",
+  "_meta": {
+   "title": "Preview Image"
+  }
+ },
+ "369": {
+  "inputs": {
+   "mask": [
+    "377",
+    0
+   ]
+  },
+  "class_type": "MaskPreview",
+  "_meta": {
+   "title": "Preview Mask"
+  }
+ },
+ "374": {
+  "inputs": {
+   "image": "example.png"
+  },
+  "class_type": "LoadImage",
+  "_meta": {
+   "title": "Load Image"
+  }
+ },
+ "376": {
+  "inputs": {
+   "x": 256,
+   "y": 256,
+   "operation": "multiply",
+   "destination": [
+    "383",
+    0
+   ],
+   "source": [
+    "398",
+    0
+   ]
+  },
+  "class_type": "MaskComposite",
+  "_meta": {
+   "title": "Combine Masks"
+  }
+ },
+ "377": {
+  "inputs": {
+   "value": 0.5,
+   "width": 1024,
+   "height": 1024
+  },
+  "class_type": "SolidMask",
+  "_meta": {
+   "title": "Create Solid Mask"
+  }
+ },
+ "378": {
+  "inputs": {
+   "mask": [
+    "376",
+    0
+   ]
+  },
+  "class_type": "MaskPreview",
+  "_meta": {
+   "title": "Preview Mask"
+  }
+ },
+ "380": {
+  "inputs": {
+   "value": 1,
+   "width": 512,
+   "height": 512
+  },
+  "class_type": "SolidMask",
+  "_meta": {
+   "title": "Create Solid Mask"
+  }
+ },
+ "381": {
+  "inputs": {
+   "mask": [
+    "380",
+    0
+   ]
+  },
+  "class_type": "MaskPreview",
+  "_meta": {
+   "title": "Preview Mask"
+  }
+ },
+ "383": {
+  "inputs": {
+   "x": 128,
+   "y": 128,
+   "operation": "add",
+   "destination": [
+    "377",
+    0
+   ],
+   "source": [
+    "380",
+    0
+   ]
+  },
+  "class_type": "MaskComposite",
+  "_meta": {
+   "title": "Combine Masks"
+  }
+ },
+ "384": {
+  "inputs": {
+   "mask": [
+    "383",
+    0
+   ]
+  },
+  "class_type": "MaskPreview",
+  "_meta": {
+   "title": "Preview Mask"
+  }
+ },
+ "387": {
+  "inputs": {
+   "x": 256,
+   "y": 256,
+   "operation": "and",
+   "destination": [
+    "383",
+    0
+   ],
+   "source": [
+    "398",
+    0
+   ]
+  },
+  "class_type": "MaskComposite",
+  "_meta": {
+   "title": "Combine Masks"
+  }
+ },
+ "388": {
+  "inputs": {
+   "mask": [
+    "387",
+    0
+   ]
+  },
+  "class_type": "MaskPreview",
+  "_meta": {
+   "title": "Preview Mask"
+  }
+ },
+ "389": {
+  "inputs": {
+   "x": 256,
+   "y": 256,
+   "operation": "or",
+   "destination": [
+    "383",
+    0
+   ],
+   "source": [
+    "398",
+    0
+   ]
+  },
+  "class_type": "MaskComposite",
+  "_meta": {
+   "title": "Combine Masks"
+  }
+ },
+ "390": {
+  "inputs": {
+   "mask": [
+    "389",
+    0
+   ]
+  },
+  "class_type": "MaskPreview",
+  "_meta": {
+   "title": "Preview Mask"
+  }
+ },
+ "391": {
+  "inputs": {
+   "x": 256,
+   "y": 256,
+   "operation": "xor",
+   "destination": [
+    "383",
+    0
+   ],
+   "source": [
+    "398",
+    0
+   ]
+  },
+  "class_type": "MaskComposite",
+  "_meta": {
+   "title": "Combine Masks"
+  }
+ },
+ "392": {
+  "inputs": {
+   "mask": [
+    "391",
+    0
+   ]
+  },
+  "class_type": "MaskPreview",
+  "_meta": {
+   "title": "Preview Mask"
+  }
+ },
+ "394": {
+  "inputs": {
+   "left": 40,
+   "top": 40,
+   "right": 40,
+   "bottom": 40,
+   "mask": [
+    "383",
+    0
+   ]
+  },
+  "class_type": "FeatherMask",
+  "_meta": {
+   "title": "Feather Mask"
+  }
+ },
+ "398": {
+  "inputs": {
+   "x": 512,
+   "y": 512,
+   "operation": "add",
+   "destination": [
+    "377",
+    0
+   ],
+   "source": [
+    "380",
+    0
+   ]
+  },
+  "class_type": "MaskComposite",
+  "_meta": {
+   "title": "Combine Masks"
+  }
+ },
+ "399": {
+  "inputs": {
+   "mask": [
+    "398",
+    0
+   ]
+  },
+  "class_type": "MaskPreview",
+  "_meta": {
+   "title": "Preview Mask"
+  }
+ },
+ "400": {
+  "inputs": {
+   "x": 256,
+   "y": 256,
+   "operation": "add",
+   "destination": [
+    "383",
+    0
+   ],
+   "source": [
+    "398",
+    0
+   ]
+  },
+  "class_type": "MaskComposite",
+  "_meta": {
+   "title": "Combine Masks"
+  }
+ },
+ "401": {
+  "inputs": {
+   "mask": [
+    "400",
+    0
+   ]
+  },
+  "class_type": "MaskPreview",
+  "_meta": {
+   "title": "Preview Mask"
+  }
+ },
+ "402": {
+  "inputs": {
+   "mask": [
+    "394",
+    0
+   ]
+  },
+  "class_type": "MaskPreview",
+  "_meta": {
+   "title": "Preview Mask"
+  }
+ }
+}

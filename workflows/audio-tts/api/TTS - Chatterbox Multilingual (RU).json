@@ -1,0 +1,58 @@
+{
+ "31": {
+  "inputs": {
+   "audio": "female_daenerys.mp3"
+  },
+  "class_type": "LoadAudio",
+  "_meta": {
+   "title": "Source Voice"
+  }
+ },
+ "32": {
+  "inputs": {
+   "audio": "male_stewie.mp3"
+  },
+  "class_type": "LoadAudio",
+  "_meta": {
+   "title": "Target Voice"
+  }
+ },
+ "37": {
+  "inputs": {
+   "model_pack_name": "T3_v3",
+   "model_version": "t3_mtl23ls_v3.safetensors",
+   "language": "ru",
+   "text": "Привет! Это Chatterbox: многоязычный синтез речи с клонированием голоса.",
+   "exaggeration": 0.5,
+   "temperature": 0.8,
+   "cfg_weight": 0.5,
+   "repetition_penalty": 1.2,
+   "min_p": 0.05,
+   "top_p": 1,
+   "seed": 660161351559885,
+   "use_watermark": false,
+   "device": "default",
+   "dtype": "auto",
+   "attention_mode": "sdpa",
+   "crash_protection_template": "hmm ,, {seg} hmm ,,"
+  },
+  "class_type": "ChatterboxMTLTTS",
+  "_meta": {
+   "title": "Chatterbox Multilingual TTS 🌍"
+  }
+ },
+ "47": {
+  "inputs": {
+   "filename_prefix": "audio/chatterbox",
+   "format": "flac",
+   "audio": [
+    "37",
+    0
+   ]
+  },
+  "class_type": "SaveAudioAdvanced",
+  "_meta": {
+   "title": "Save Audio (Advanced)"
+  }
+ }
+}

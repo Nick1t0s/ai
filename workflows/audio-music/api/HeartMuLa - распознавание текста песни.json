@@ -1,0 +1,40 @@
+{
+ "24": {
+  "inputs": {
+   "audio_file": "",
+   "seek_seconds": 0,
+   "duration": 30
+  },
+  "class_type": "VHS_LoadAudio",
+  "_meta": {
+   "title": "Load Audio (Path)🎥🅥🅗🅢"
+  }
+ },
+ "26": {
+  "inputs": {
+   "temperature_tuple": "0.0,0.1,0.2,0.4",
+   "no_speech_threshold": 0.4,
+   "logprob_threshold": -1,
+   "audio_input": [
+    "24",
+    0
+   ]
+  },
+  "class_type": "HeartMuLa_Transcribe",
+  "_meta": {
+   "title": "HeartMuLa Lyrics Transcriber"
+  }
+ },
+ "27": {
+  "inputs": {
+   "source": [
+    "26",
+    0
+   ]
+  },
+  "class_type": "PreviewAny",
+  "_meta": {
+   "title": "Preview as Text"
+  }
+ }
+}

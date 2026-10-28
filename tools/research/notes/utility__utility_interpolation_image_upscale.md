@@ -1,0 +1,1 @@
+Image Compare is now only available under Nodes 2.0. Open menu -> Nodes 2.0 to switch

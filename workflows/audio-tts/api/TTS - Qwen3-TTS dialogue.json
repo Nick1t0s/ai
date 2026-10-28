@@ -1,0 +1,237 @@
+{
+ "38": {
+  "inputs": {
+   "text": "Чего ты так нервничаешь? У тебя даже руки дрожат… Может, сядешь поближе? Тут слишком шумно.",
+   "instruct": "A mature, confident female voice, slightly husky and calm, unhurried pace, teasing and playful intonation with slightly drawn-out endings.",
+   "model_choice": "1.7B",
+   "device": "auto",
+   "precision": "bf16",
+   "language": "Russian",
+   "seed": 194743494784600,
+   "max_new_tokens": 2048,
+   "top_p": 0.8,
+   "top_k": 20,
+   "temperature": 1,
+   "repetition_penalty": 1.05,
+   "attention": "auto",
+   "unload_model_after_generate": false
+  },
+  "class_type": "FB_Qwen3TTSVoiceDesign",
+  "_meta": {
+   "title": "🎨 Qwen3-TTS VoiceDesign"
+  }
+ },
+ "52": {
+  "inputs": {
+   "role_name_1": "Анна",
+   "role_name_2": "Максим",
+   "role_name_3": "Рассказчик",
+   "role_name_4": "Role4",
+   "role_name_5": "Role5",
+   "role_name_6": "Role6",
+   "role_name_7": "Role7",
+   "role_name_8": "Role8",
+   "prompt_1": [
+    "56",
+    0
+   ],
+   "prompt_2": [
+    "57",
+    0
+   ],
+   "prompt_3": [
+    "58",
+    0
+   ]
+  },
+  "class_type": "FB_Qwen3TTSRoleBank",
+  "_meta": {
+   "title": "📇 Qwen3-TTS RoleBank"
+  }
+ },
+ "54": {
+  "inputs": {
+   "text": "Поближе? Но… мы же только познакомились… Ты меня совсем не знаешь…",
+   "instruct": "A 25-year-old male office worker: clear but hesitant voice, uneven tempo, stammers slightly when nervous, emotions swing from murmuring to sudden excitement to self-doubting sighs.",
+   "model_choice": "1.7B",
+   "device": "auto",
+   "precision": "bf16",
+   "language": "Russian",
+   "seed": 489742050863978,
+   "max_new_tokens": 2048,
+   "top_p": 0.8,
+   "top_k": 20,
+   "temperature": 1,
+   "repetition_penalty": 1.05,
+   "attention": "auto",
+   "unload_model_after_generate": false
+  },
+  "class_type": "FB_Qwen3TTSVoiceDesign",
+  "_meta": {
+   "title": "🎨 Qwen3-TTS VoiceDesign"
+  }
+ },
+ "55": {
+  "inputs": {
+   "text": "Максим уже в третий раз за вечер отвлёкся. Тусклый свет бара заставлял сердце биться чаще, а женщина напротив медленно водила пальцем по краю бокала.",
+   "instruct": "A calm, objective female narrator in audiobook style: moderate pace, smooth expressive intonation, short pauses at key moments, a hint of irony.",
+   "model_choice": "1.7B",
+   "device": "auto",
+   "precision": "bf16",
+   "language": "Russian",
+   "seed": 238357790124060,
+   "max_new_tokens": 2048,
+   "top_p": 0.8,
+   "top_k": 20,
+   "temperature": 1,
+   "repetition_penalty": 1.05,
+   "attention": "auto",
+   "unload_model_after_generate": false
+  },
+  "class_type": "FB_Qwen3TTSVoiceDesign",
+  "_meta": {
+   "title": "🎨 Qwen3-TTS VoiceDesign"
+  }
+ },
+ "56": {
+  "inputs": {
+   "ref_text": "Чего ты так нервничаешь? У тебя даже руки дрожат… Может, сядешь поближе? Тут слишком шумно.",
+   "model_choice": "1.7B",
+   "device": "auto",
+   "precision": "bf16",
+   "attention": "auto",
+   "x_vector_only": false,
+   "unload_model_after_generate": false,
+   "ref_audio": [
+    "38",
+    0
+   ]
+  },
+  "class_type": "FB_Qwen3TTSVoiceClonePrompt",
+  "_meta": {
+   "title": "🎭 Qwen3-TTS VoiceClonePrompt"
+  }
+ },
+ "57": {
+  "inputs": {
+   "ref_text": "Поближе? Но… мы же только познакомились… Ты меня совсем не знаешь…",
+   "model_choice": "1.7B",
+   "device": "auto",
+   "precision": "bf16",
+   "attention": "auto",
+   "x_vector_only": false,
+   "unload_model_after_generate": false,
+   "ref_audio": [
+    "54",
+    0
+   ]
+  },
+  "class_type": "FB_Qwen3TTSVoiceClonePrompt",
+  "_meta": {
+   "title": "🎭 Qwen3-TTS VoiceClonePrompt"
+  }
+ },
+ "58": {
+  "inputs": {
+   "ref_text": "Максим уже в третий раз за вечер отвлёкся. Тусклый свет бара заставлял сердце биться чаще, а женщина напротив медленно водила пальцем по краю бокала.",
+   "model_choice": "1.7B",
+   "device": "auto",
+   "precision": "bf16",
+   "attention": "auto",
+   "x_vector_only": false,
+   "unload_model_after_generate": false,
+   "ref_audio": [
+    "55",
+    0
+   ]
+  },
+  "class_type": "FB_Qwen3TTSVoiceClonePrompt",
+  "_meta": {
+   "title": "🎭 Qwen3-TTS VoiceClonePrompt"
+  }
+ },
+ "59": {
+  "inputs": {
+   "filename_prefix": "audio/ComfyUI",
+   "audio": [
+    "38",
+    0
+   ]
+  },
+  "class_type": "SaveAudio",
+  "_meta": {
+   "title": "Save Audio (FLAC) (DEPRECATED)"
+  }
+ },
+ "60": {
+  "inputs": {
+   "filename_prefix": "audio/ComfyUI",
+   "audio": [
+    "54",
+    0
+   ]
+  },
+  "class_type": "SaveAudio",
+  "_meta": {
+   "title": "Save Audio (FLAC) (DEPRECATED)"
+  }
+ },
+ "61": {
+  "inputs": {
+   "filename_prefix": "audio/ComfyUI",
+   "audio": [
+    "55",
+    0
+   ]
+  },
+  "class_type": "SaveAudio",
+  "_meta": {
+   "title": "Save Audio (FLAC) (DEPRECATED)"
+  }
+ },
+ "62": {
+  "inputs": {
+   "filename_prefix": "audio/ComfyUI",
+   "audio": [
+    "70",
+    0
+   ]
+  },
+  "class_type": "SaveAudio",
+  "_meta": {
+   "title": "Save Audio (FLAC) (DEPRECATED)"
+  }
+ },
+ "70": {
+  "inputs": {
+   "script": "Рассказчик: Максим уже в третий раз за вечер отвлёкся. Тусклый свет бара заставлял сердце биться чаще, а женщина напротив, чуть улыбаясь, медленно водила пальцем по краю бокала.\nАнна: Эй, не хочешь выпить со мной?\nМаксим: А? Я… я вообще-то не очень умею пить…\nРассказчик: Он машинально теребил край стакана, будто что-то невидимое сдавило ему горло.\nАнна: Не умеешь? Тем лучше — я научу. Этот мохито сладкий ровно настолько, насколько сладким был твой взгляд, когда ты на меня подглядывал.\nМаксим: Я не подглядывал! …Ладно, посмотрел. Один раз. Всего один!\nРассказчик: Он резко выпрямился и тут же снова втянул голову в плечи, будто эти слова обожгли ему губы.\nАнна: Чего ты так нервничаешь? У тебя даже руки дрожат… Может, сядешь поближе? Тут слишком шумно.\nМаксим: Поближе? Но… мы же только познакомились… Ты меня совсем не знаешь…\nАнна: Имена не важны, важны ощущения. А мне кажется… ты милый.\nРассказчик: Уши Максима мгновенно покраснели. Он хотел сбежать, но ноги будто приросли к высокому табурету.\nМаксим: Милый? Мне такого никто не говорил… Все считают меня занудой…\nАнна: Тогда, может, пригласишь меня на танец?\nРассказчик: Он открыл рот, но не издал ни звука. И всё же на этот раз он не опустил глаза, а отодвинул нетронутую содовую и протянул ей руку.",
+   "model_choice": "1.7B",
+   "device": "auto",
+   "precision": "bf16",
+   "language": "Russian",
+   "pause_linebreak": 0.5,
+   "period_pause": 0.4,
+   "comma_pause": 0.2,
+   "question_pause": 0.6,
+   "hyphen_pause": 0.3,
+   "merge_outputs": true,
+   "batch_size": 4,
+   "seed": 240709709840382,
+   "max_new_tokens_per_line": 2048,
+   "top_p": 0.8,
+   "top_k": 20,
+   "temperature": 1,
+   "repetition_penalty": 1.05,
+   "attention": "auto",
+   "unload_model_after_generate": false,
+   "role_bank": [
+    "52",
+    0
+   ]
+  },
+  "class_type": "FB_Qwen3TTSDialogueInference",
+  "_meta": {
+   "title": "💬 Qwen3-TTS DialogueInference"
+  }
+ }
+}

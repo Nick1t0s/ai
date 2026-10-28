@@ -1,0 +1,145 @@
+{
+ "7": {
+  "inputs": {
+   "filename_prefix": "3d/Moge",
+   "image": "",
+   "mesh": [
+    "29:24",
+    0
+   ]
+  },
+  "class_type": "SaveGLB",
+  "_meta": {
+   "title": "Save 3D Model"
+  }
+ },
+ "28": {
+  "inputs": {
+   "image": "lego_street_panorama.png"
+  },
+  "class_type": "LoadImage",
+  "_meta": {
+   "title": "Load Image"
+  }
+ },
+ "29:5": {
+  "inputs": {
+   "resolution_level": 5,
+   "split_resolution": 512,
+   "merge_resolution": 1024,
+   "batch_size": 4,
+   "moge_model": [
+    "29:8",
+    0
+   ],
+   "image": [
+    "29:34",
+    0
+   ]
+  },
+  "class_type": "MoGePanoramaInference",
+  "_meta": {
+   "title": "Run MoGe Panorama Inference"
+  }
+ },
+ "29:24": {
+  "inputs": {
+   "batch_index": 0,
+   "decimation": 1,
+   "discontinuity_threshold": 0.04,
+   "texture": true,
+   "moge_geometry": [
+    "29:5",
+    0
+   ]
+  },
+  "class_type": "MoGePointMapToMesh",
+  "_meta": {
+   "title": "Convert MoGe Point Map to Mesh"
+  }
+ },
+ "29:8": {
+  "inputs": {
+   "model_name": "moge_2_vitl_normal_fp16.safetensors"
+  },
+  "class_type": "LoadMoGeModel",
+  "_meta": {
+   "title": "Load MoGe Model"
+  }
+ },
+ "29:30": {
+  "inputs": {
+   "expression": "a > 2048",
+   "values.a": [
+    "29:31",
+    0
+   ]
+  },
+  "class_type": "ComfyMathExpression",
+  "_meta": {
+   "title": "Math Expression"
+  }
+ },
+ "29:31": {
+  "inputs": {
+   "image": [
+    "28",
+    0
+   ]
+  },
+  "class_type": "GetImageSize",
+  "_meta": {
+   "title": "Get Image Size"
+  }
+ },
+ "29:32": {
+  "inputs": {
+   "longer_edge": 2048,
+   "images": [
+    "28",
+    0
+   ]
+  },
+  "class_type": "ResizeImagesByLongerEdge",
+  "_meta": {
+   "title": "Resize Images by Longer Edge (DEPRECATED)"
+  }
+ },
+ "29:33": {
+  "inputs": {
+   "switch": [
+    "29:30",
+    2
+   ],
+   "on_false": [
+    "28",
+    0
+   ],
+   "on_true": [
+    "29:32",
+    0
+   ]
+  },
+  "class_type": "ComfySwitchNode",
+  "_meta": {
+   "title": "If/Else Switch"
+  }
+ },
+ "29:34": {
+  "inputs": {
+   "switch": false,
+   "on_false": [
+    "28",
+    0
+   ],
+   "on_true": [
+    "29:33",
+    0
+   ]
+  },
+  "class_type": "ComfySwitchNode",
+  "_meta": {
+   "title": "If/Else Switch"
+  }
+ }
+}

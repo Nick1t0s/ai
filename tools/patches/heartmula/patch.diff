@@ -1,0 +1,29 @@
+--- /tmp/claude-1000/-home-nik/7c8b3941-7088-42b4-b779-03869ca42d5b/scratchpad/wf-backup/heartmula/music_generation.py.orig	2026-10-16 10:30:18.464911196 +0300
++++ custom_nodes/HeartMuLa_ComfyUI/util/heartlib/pipelines/music_generation.py	2026-10-16 10:30:27.157815315 +0300
+@@ -198,7 +198,16 @@
+                 break
+             frames.append(curr_token[0:1,])
+         frames = torch.stack(frames).permute(1, 2, 0).squeeze(0)
+-        wav = self.audio_codec.detokenize(frames)
++        # 12 GB VRAM: the LM (~7.7 GB bf16) and the fp32 codec (~6.6 GB) take turns on the GPU
++        if self.device.type == "cuda":
++            self.model.to("cpu")
++            torch.cuda.empty_cache()
++            self.audio_codec.to(self.device)
++        wav = self.audio_codec.detokenize(frames, device=self.audio_codec.device)
++        if self.device.type == "cuda":
++            self.audio_codec.to("cpu")
++            torch.cuda.empty_cache()
++            self.model.to(self.device)
+         return {"wav": wav}
+ 
+     def postprocess(self, model_outputs: Dict[str, Any], save_path: str):
+@@ -218,7 +227,7 @@
+         if os.path.exists(
+             heartcodec_path := os.path.join(pretrained_path, "HeartCodec-oss-20260123")
+         ):
+-            heartcodec = HeartCodec.from_pretrained(heartcodec_path, device_map=device, ignore_mismatched_sizes=True)
++            heartcodec = HeartCodec.from_pretrained(heartcodec_path, device_map="cpu" if device.type == "cuda" else device, ignore_mismatched_sizes=True)
+         else:
+             raise FileNotFoundError(
+                 f"Expected to find checkpoint for HeartCodec at {heartcodec_path} but not found. Please check your folder {pretrained_path}."

@@ -1,0 +1,197 @@
+{
+ "1": {
+  "inputs": {
+   "image": "example.png"
+  },
+  "class_type": "LoadImage",
+  "_meta": {
+   "title": "Load Image"
+  }
+ },
+ "2": {
+  "inputs": {
+   "upscale_method": "lanczos",
+   "megapixels": 1,
+   "resolution_steps": 8,
+   "image": [
+    "1",
+    0
+   ]
+  },
+  "class_type": "ImageScaleToTotalPixels",
+  "_meta": {
+   "title": "К ~1 МП"
+  }
+ },
+ "3": {
+  "inputs": {
+   "model_name": "RealESRGAN_x4plus.safetensors"
+  },
+  "class_type": "UpscaleModelLoader",
+  "_meta": {
+   "title": "Load Upscale Model"
+  }
+ },
+ "4": {
+  "inputs": {
+   "upscale_model": [
+    "3",
+    0
+   ],
+   "image": [
+    "2",
+    0
+   ]
+  },
+  "class_type": "ImageUpscaleWithModel",
+  "_meta": {
+   "title": "Upscale Image (using Model)"
+  }
+ },
+ "5": {
+  "inputs": {
+   "upscale_method": "lanczos",
+   "scale_by": 0.375,
+   "image": [
+    "4",
+    0
+   ]
+  },
+  "class_type": "ImageScaleBy",
+  "_meta": {
+   "title": "×4 → ×1.5"
+  }
+ },
+ "6": {
+  "inputs": {
+   "ckpt_name": "Illustrious-XL-v2.0.safetensors"
+  },
+  "class_type": "CheckpointLoaderSimple",
+  "_meta": {
+   "title": "Load Checkpoint"
+  }
+ },
+ "7": {
+  "inputs": {
+   "text": "masterpiece, best quality, very aesthetic, absurdres, highres, detailed",
+   "clip": [
+    "6",
+    1
+   ]
+  },
+  "class_type": "CLIPTextEncode",
+  "_meta": {
+   "title": "Positive Prompt"
+  }
+ },
+ "8": {
+  "inputs": {
+   "text": "worst quality, low quality, lowres, blurry, jpeg artifacts, bad anatomy, bad hands, extra digits, fewer digits, signature, watermark, username",
+   "clip": [
+    "6",
+    1
+   ]
+  },
+  "class_type": "CLIPTextEncode",
+  "_meta": {
+   "title": "Negative Prompt"
+  }
+ },
+ "9": {
+  "inputs": {
+   "pixels": [
+    "5",
+    0
+   ],
+   "vae": [
+    "6",
+    2
+   ]
+  },
+  "class_type": "VAEEncode",
+  "_meta": {
+   "title": "VAE Encode"
+  }
+ },
+ "10": {
+  "inputs": {
+   "seed": 0,
+   "steps": 20,
+   "cfg": 5,
+   "sampler_name": "euler_ancestral",
+   "scheduler": "normal",
+   "denoise": 0.35,
+   "model": [
+    "6",
+    0
+   ],
+   "positive": [
+    "7",
+    0
+   ],
+   "negative": [
+    "8",
+    0
+   ],
+   "latent_image": [
+    "9",
+    0
+   ]
+  },
+  "class_type": "KSampler",
+  "_meta": {
+   "title": "KSampler"
+  }
+ },
+ "11": {
+  "inputs": {
+   "samples": [
+    "10",
+    0
+   ],
+   "vae": [
+    "6",
+    2
+   ]
+  },
+  "class_type": "VAEDecode",
+  "_meta": {
+   "title": "VAE Decode"
+  }
+ },
+ "12": {
+  "inputs": {
+   "filename_prefix": "anime_upscale/img",
+   "images": [
+    "11",
+    0
+   ]
+  },
+  "class_type": "SaveImage",
+  "_meta": {
+   "title": "Save Image"
+  }
+ },
+ "13": {
+  "inputs": {
+   "compare_view": {
+    "__value__": [
+     "",
+     ""
+    ]
+   },
+   "image_a": [
+    "1",
+    0
+   ],
+   "image_b": [
+    "11",
+    0
+   ]
+  },
+  "class_type": "ImageCompare",
+  "_meta": {
+   "title": "Compare Images"
+  }
+ }
+}
